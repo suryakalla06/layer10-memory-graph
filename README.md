@@ -20,7 +20,7 @@ To ensure this project is "clonable and runnable" immediately, I have included a
 1. Clone this repository and install requirements (`pip install -r requirements.txt`).
 2. set you API key ( `export GEMINI_API_KEY="your_api_key_here"` ) using this command.
 3. Run `python -m graph.build_graph` to run the extraction pipeline and build `memory_graph_output.json`. *(Note: Semantic extraction is limited to 10 emails by default to respect free-tier API rate limits, but header extraction runs on all 1,000).*
-4. Run `python extraction/generate_packs.py` to generate the text-based Retrieval Context Packs.
+4. Run `python -m generate_context_packs` to generate the text-based Retrieval Context Packs.
 5. Run `streamlit run app.py` to launch the interactive visualization layer.
 
 ## 2. Ontology & Extraction Contract

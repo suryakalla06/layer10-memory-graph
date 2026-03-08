@@ -81,7 +81,7 @@ def build_memory_graph(emails: List[EmailArtifact]) -> MemoryGraph:
         # 4. LLM Semantic Extraction (Slow - limit to first 10 for demonstration)
         LIMIT = 10
         if index < LIMIT:
-            print(f"Running LLM Extraction on email {index + 1}/10...")
+            print(f"Running LLM Extraction on email {index + 1}/{LIMIT}...")
             llm_data = extract_knowledge_from_email(email)
             
             # Add LLM Entities

@@ -24,8 +24,16 @@
             "id": "tim.belden@enron.com"
         },
         {
+            "entity_id": "Enron",
+            "entity_type": "Company",
+            "name": "Enron",
+            "aliases": [],
+            "metadata": {},
+            "id": "Enron"
+        },
+        {
             "entity_id": "Phillip Allen",
-            "entity_type": "Person",
+            "entity_type": "Inferred",
             "name": "Phillip Allen",
             "aliases": [],
             "metadata": {},
@@ -33,19 +41,11 @@
         },
         {
             "entity_id": "Tim Belden",
-            "entity_type": "Person",
+            "entity_type": "Inferred",
             "name": "Tim Belden",
             "aliases": [],
             "metadata": {},
             "id": "Tim Belden"
-        },
-        {
-            "entity_id": "Enron",
-            "entity_type": "Company",
-            "name": "Enron",
-            "aliases": [],
-            "metadata": {},
-            "id": "Enron"
         },
         {
             "entity_id": "forecast",
@@ -66,12 +66,39 @@
             "id": "john.lavorato@enron.com"
         },
         {
-            "entity_id": "western_desk",
-            "entity_type": "Organization",
-            "name": "Western Trading Desk",
+            "entity_id": "austin_trip_discussion",
+            "entity_type": "Project",
+            "name": "Austin Trip Discussion",
+            "aliases": [
+                "trip",
+                "business plan meetings"
+            ],
+            "metadata": {},
+            "id": "austin_trip_discussion"
+        },
+        {
+            "entity_id": "phillip_allen",
+            "entity_type": "Inferred",
+            "name": "phillip_allen",
             "aliases": [],
             "metadata": {},
-            "id": "western_desk"
+            "id": "phillip_allen"
+        },
+        {
+            "entity_id": "enron",
+            "entity_type": "Inferred",
+            "name": "enron",
+            "aliases": [],
+            "metadata": {},
+            "id": "enron"
+        },
+        {
+            "entity_id": "john_lavorato",
+            "entity_type": "Inferred",
+            "name": "john_lavorato",
+            "aliases": [],
+            "metadata": {},
+            "id": "john_lavorato"
         },
         {
             "entity_id": "leah.arsdall@enron.com",
@@ -82,6 +109,14 @@
                 "domain": "enron.com"
             },
             "id": "leah.arsdall@enron.com"
+        },
+        {
+            "entity_id": "western_desk",
+            "entity_type": "Organization",
+            "name": "Western Trading Desk",
+            "aliases": [],
+            "metadata": {},
+            "id": "western_desk"
         },
         {
             "entity_id": "randall.gay@enron.com",
@@ -3386,7 +3421,7 @@
     ],
     "links": [
         {
-            "claim_id": "773e39fa-cd93-40b2-984f-4368bee4b86e",
+            "claim_id": "413579a3-2ab3-463c-99e0-53fa2a17a4c6",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "tim.belden@enron.com",
@@ -3506,7 +3541,7 @@
             "key": 0
         },
         {
-            "claim_id": "dc6b0667-fea8-4b62-9381-7a3c229fbfc5",
+            "claim_id": "06e1b62a-24d5-489f-9d8f-e6c2d17e5f81",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.lavorato@enron.com",
@@ -3703,18 +3738,33 @@
             "key": 0
         },
         {
-            "claim_id": "97b862ae-9efb-4c57-ac57-4696f99e5040",
+            "claim_id": "3d2ff3bc-c9be-497d-9ab6-6ae8a7d5c962",
+            "subject_id": "phillip.allen@enron.com",
+            "relation": "SENT_EMAIL_TO",
+            "object_id": "leah.arsdall@enron.com",
+            "evidence": [
+                {
+                    "source_id": "24216240.1075855687451.JavaMail.evans@thyme",
+                    "excerpt": "Subject: Re: test",
+                    "start_offset": -1,
+                    "end_offset": -1,
+                    "timestamp": "2000-10-18 03:00:00-07:00"
+                }
+            ],
+            "valid_from": "2000-10-18 03:00:00-07:00",
+            "valid_until": null,
+            "status": "active",
+            "version": "v1",
+            "source": "phillip.allen@enron.com",
+            "target": "leah.arsdall@enron.com",
+            "key": 0
+        },
+        {
+            "claim_id": "3566efb5-87e7-4149-a374-11ba36964709",
             "subject_id": "phillip.allen@enron.com",
             "relation": "MANAGES",
             "object_id": "western_desk",
             "evidence": [
-                {
-                    "source_id": "15464986.1075855378456.JavaMail.evans@thyme",
-                    "excerpt": "Traveling to have a business meeting takes the fun",
-                    "start_offset": 0,
-                    "end_offset": 50,
-                    "timestamp": "2001-05-04 13:51:00-07:00"
-                },
                 {
                     "source_id": "24216240.1075855687451.JavaMail.evans@thyme",
                     "excerpt": "test successful.  way to go!!!",
@@ -3772,7 +3822,7 @@
                     "timestamp": "2000-10-16 06:44:00-07:00"
                 }
             ],
-            "valid_from": "2001-05-04 13:51:00-07:00",
+            "valid_from": "2000-10-18 03:00:00-07:00",
             "valid_until": null,
             "status": "active",
             "version": "v1",
@@ -3781,29 +3831,7 @@
             "key": 0
         },
         {
-            "claim_id": "47694c4c-efae-4b7a-aa7a-cba2e2d0968a",
-            "subject_id": "phillip.allen@enron.com",
-            "relation": "SENT_EMAIL_TO",
-            "object_id": "leah.arsdall@enron.com",
-            "evidence": [
-                {
-                    "source_id": "24216240.1075855687451.JavaMail.evans@thyme",
-                    "excerpt": "Subject: Re: test",
-                    "start_offset": -1,
-                    "end_offset": -1,
-                    "timestamp": "2000-10-18 03:00:00-07:00"
-                }
-            ],
-            "valid_from": "2000-10-18 03:00:00-07:00",
-            "valid_until": null,
-            "status": "active",
-            "version": "v1",
-            "source": "phillip.allen@enron.com",
-            "target": "leah.arsdall@enron.com",
-            "key": 0
-        },
-        {
-            "claim_id": "271c85df-379f-4501-870e-3730cd7bc8ae",
+            "claim_id": "cbb0b153-a936-4f60-8a48-8291980f2e13",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "randall.gay@enron.com",
@@ -3860,7 +3888,7 @@
             "key": 0
         },
         {
-            "claim_id": "88e95f7f-1a01-4c49-9f55-55aef0aeb66a",
+            "claim_id": "4cc9693d-1545-4580-b647-fcbfbabb9cd4",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "greg.piper@enron.com",
@@ -3889,7 +3917,7 @@
             "key": 0
         },
         {
-            "claim_id": "fb6d0dd0-ecf7-4aca-b68b-195ad4399a1d",
+            "claim_id": "83ecd3fd-a051-4c95-9f94-a2d75c578d10",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "david.l.johnson@enron.com",
@@ -3911,7 +3939,7 @@
             "key": 0
         },
         {
-            "claim_id": "28b1a8e1-284b-4506-84e1-da61bd89dd1a",
+            "claim_id": "6575fca2-458a-4592-ae8d-de4298cf6e3f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.shafer@enron.com",
@@ -3933,7 +3961,7 @@
             "key": 0
         },
         {
-            "claim_id": "e6df7c84-4c87-417d-90a6-07176d0969fc",
+            "claim_id": "ca5ee176-d787-4e5c-9bed-7263a0be30f6",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "joyce.teixeira@enron.com",
@@ -3955,7 +3983,7 @@
             "key": 0
         },
         {
-            "claim_id": "a9e7d125-006a-4710-9369-d16f454737c7",
+            "claim_id": "01a7d72b-ac82-4eae-8ded-14be1f9baf49",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.scott@enron.com",
@@ -3977,7 +4005,7 @@
             "key": 0
         },
         {
-            "claim_id": "3df506a2-62aa-490b-bafb-2aad72c6a10a",
+            "claim_id": "bb9f5d57-f904-4048-957a-221ca78edc3b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "zimam@enron.com",
@@ -3999,7 +4027,7 @@
             "key": 0
         },
         {
-            "claim_id": "cf393f18-4d0a-4e24-a7fe-bb5401a7b0fa",
+            "claim_id": "c174e90f-bfaa-42b0-9e71-b60cfcad1066",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "buck.buckner@honeywell.com",
@@ -4021,7 +4049,7 @@
             "key": 0
         },
         {
-            "claim_id": "782923e8-34e7-4bb5-b5ca-cda0678a8c65",
+            "claim_id": "9edc003a-e2ef-4d90-980c-4272dca07e09",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stagecoachmama@hotmail.com",
@@ -4449,7 +4477,7 @@
             "key": 0
         },
         {
-            "claim_id": "e551e86c-a53f-473c-a9a1-894949262192",
+            "claim_id": "fa12fac9-22ab-4576-852b-9e993f74c4a9",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "keith.holst@enron.com",
@@ -4940,7 +4968,7 @@
             "key": 0
         },
         {
-            "claim_id": "b94f0c13-75df-4fa9-9df0-4e4662409e43",
+            "claim_id": "ebf539ba-f18d-4847-a57e-0ad4cbb7eeb8",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "david.delainey@enron.com",
@@ -4976,7 +5004,7 @@
             "key": 0
         },
         {
-            "claim_id": "f4aa1e2c-cf38-41f7-a486-ed4edc059979",
+            "claim_id": "3a6817ae-456e-4367-a8f7-d3253af237b9",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "paula.harris@enron.com",
@@ -5026,7 +5054,7 @@
             "key": 0
         },
         {
-            "claim_id": "f832d069-3823-49d2-9985-490390c47f08",
+            "claim_id": "01e5f575-ea27-4138-b6f1-b4460ace49c7",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ina.rangel@enron.com",
@@ -5517,7 +5545,7 @@
             "key": 0
         },
         {
-            "claim_id": "8b2e012d-9cbd-4aa6-9e16-319388f3cfc4",
+            "claim_id": "976c9a7e-eef2-41e5-9691-0935ff2bac6c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "tim.heizenrader@enron.com",
@@ -5588,7 +5616,7 @@
             "key": 0
         },
         {
-            "claim_id": "89364328-a67f-4f76-b846-4f593a7de012",
+            "claim_id": "ef07dcd2-c9af-47f2-94b3-93c10ac66372",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen70@hotmail.com",
@@ -5897,7 +5925,7 @@
             "key": 0
         },
         {
-            "claim_id": "a1be39b5-1fc1-4d98-ba0c-61e7bf0fe9f7",
+            "claim_id": "028526ef-ef5c-4284-bcd9-6266491f2b56",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "bs_stone@yahoo.com",
@@ -5968,7 +5996,7 @@
             "key": 0
         },
         {
-            "claim_id": "d5af81e1-482e-4f4b-8a1b-9690645b5451",
+            "claim_id": "6df76962-bd1d-41fc-912a-6c763f2ffad1",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stouchstone@natsource.com",
@@ -6067,7 +6095,7 @@
             "key": 0
         },
         {
-            "claim_id": "c27dc6f1-0400-4eae-8c58-057e356cad25",
+            "claim_id": "7440825e-2fad-44bc-922b-bc2b5415a4b9",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "lkuch@mh.com",
@@ -6096,7 +6124,7 @@
             "key": 0
         },
         {
-            "claim_id": "97abf2b2-3b47-4340-a0e1-bb201ea40ef0",
+            "claim_id": "842e0005-d251-4346-bdab-bc90be6e2917",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeffrey.hodge@enron.com",
@@ -6125,7 +6153,7 @@
             "key": 0
         },
         {
-            "claim_id": "1f926b43-ecf4-4530-bbdf-b13a82be9801",
+            "claim_id": "a2223637-99ff-4b3a-9f67-105c48cbf0ed",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kholst@enron.com",
@@ -6161,7 +6189,7 @@
             "key": 0
         },
         {
-            "claim_id": "d57e9b67-8b05-42ad-8130-c5c63e4c846d",
+            "claim_id": "c1fbdfcc-91ae-463c-ba86-1546e2a0e05d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "rlehmann@yahoo.com",
@@ -6274,7 +6302,7 @@
             "key": 0
         },
         {
-            "claim_id": "707a5616-d44d-4751-b81e-d645a32a47c3",
+            "claim_id": "dbbc5eaf-a8b7-4dcf-8dbd-cb91db6c74c1",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "cindy.cicchetti@enron.com",
@@ -6303,7 +6331,7 @@
             "key": 0
         },
         {
-            "claim_id": "1fd51d96-a154-42a7-bb58-e6e2d2074c90",
+            "claim_id": "6582eedc-3ac4-44a9-a2bd-badb324adea1",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jsmith@austintx.com",
@@ -6738,7 +6766,7 @@
             "key": 0
         },
         {
-            "claim_id": "957edac5-d7df-4eb3-8039-5b34009b4276",
+            "claim_id": "4db56103-0c61-4b47-8052-8ca397e5d794",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "christopher.calger@enron.com",
@@ -6767,7 +6795,7 @@
             "key": 0
         },
         {
-            "claim_id": "1a6056cc-6d28-4da3-83c1-c7c25e4f2269",
+            "claim_id": "266b401e-5a20-4c22-b3b6-672d6103955e",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "muller@thedoghousemail.com",
@@ -6831,7 +6859,7 @@
             "key": 0
         },
         {
-            "claim_id": "65ec4282-f308-4de0-941d-97a676fd59db",
+            "claim_id": "43b79799-a621-4ff5-94bb-d27a4b93438e",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kathy.moore@enron.com",
@@ -6860,7 +6888,7 @@
             "key": 0
         },
         {
-            "claim_id": "9de1cbff-77fd-42bc-8a27-abb2ad96940e",
+            "claim_id": "0f1cdeec-0c7d-4c86-86eb-1895267ee411",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "james.steffes@enron.com",
@@ -6917,7 +6945,7 @@
             "key": 0
         },
         {
-            "claim_id": "8d20d616-7101-4976-8b5d-c01b89ed5614",
+            "claim_id": "ab8a5edb-830c-4ba8-8ae9-222a32cba2bc",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "cbpres@austin.rr.com",
@@ -7100,7 +7128,7 @@
             "key": 0
         },
         {
-            "claim_id": "0cb5581f-92a4-49b9-aec1-a31dbaf4a163",
+            "claim_id": "83202e51-ae31-4dfb-8aa6-4873b64d21fb",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "paul.lucci@enron.com",
@@ -7143,7 +7171,7 @@
             "key": 0
         },
         {
-            "claim_id": "1c5edd1e-478b-49a4-bf39-2f91e5c37907",
+            "claim_id": "8c575f04-f071-446f-ad58-4f4df2a33e60",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kenneth.shulklapper@enron.com",
@@ -7214,7 +7242,7 @@
             "key": 0
         },
         {
-            "claim_id": "12115803-2b97-497b-975a-b00a4286e8b3",
+            "claim_id": "a8c1bb3e-483f-4076-8a2f-05a47460cd9b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "moshuffle@hotmail.com",
@@ -7243,7 +7271,7 @@
             "key": 0
         },
         {
-            "claim_id": "b1490da3-6f03-4f8c-bd5c-dfaafb4b40aa",
+            "claim_id": "68dceba2-5161-4570-afa0-7610acc0ebee",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "tori.kuykendall@enron.com",
@@ -7349,7 +7377,7 @@
             "key": 0
         },
         {
-            "claim_id": "a12fc55c-49df-42fe-ba04-1f683cb5b125",
+            "claim_id": "03c0aa53-7b79-48aa-960d-a8c02ab27a8b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "frank.hayden@enron.com",
@@ -7406,7 +7434,7 @@
             "key": 0
         },
         {
-            "claim_id": "e85b6e3f-d8f1-4345-acd3-87ee34561621",
+            "claim_id": "a676aec9-7042-42d7-a70f-b84daae4404b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "retwell@sanmarcos.net",
@@ -7435,7 +7463,7 @@
             "key": 0
         },
         {
-            "claim_id": "2f4084db-9eb1-46b2-ac3b-3407a7913fcb",
+            "claim_id": "bc3b480f-c596-4529-ac3f-7a24e965d70c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "thomas.martin@enron.com",
@@ -7471,7 +7499,7 @@
             "key": 0
         },
         {
-            "claim_id": "a17ec33e-5131-45a8-ab9d-f7687d8835b0",
+            "claim_id": "65a69fbe-1677-46ca-a630-23f1b4758b31",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mike.grigsby@enron.com",
@@ -7871,7 +7899,7 @@
             "key": 0
         },
         {
-            "claim_id": "a6fa7c88-de04-4f97-a220-913a769e3eed",
+            "claim_id": "57308971-beba-4fb8-881c-0bff2aa23e2f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jay.reitmeyer@enron.com",
@@ -7998,7 +8026,7 @@
             "key": 0
         },
         {
-            "claim_id": "03219088-bd7d-420c-8efa-0be43b5660a8",
+            "claim_id": "cb5c33d9-90cb-42bb-b0f2-f6f4b9609f6c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "frank.ermis@enron.com",
@@ -8258,7 +8286,7 @@
             "key": 0
         },
         {
-            "claim_id": "174ed42c-b543-4b8a-8508-040a73a4f263",
+            "claim_id": "352cbbd7-314d-41c9-a40c-a7146c55a871",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "dexter@intelligencepress.com",
@@ -8301,7 +8329,7 @@
             "key": 0
         },
         {
-            "claim_id": "39eb4145-965d-4659-ace1-9cbb0d7370e7",
+            "claim_id": "48eed566-1a16-4aa8-9d9a-bc73372b57cc",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "rich@pira.com",
@@ -8330,7 +8358,7 @@
             "key": 0
         },
         {
-            "claim_id": "69ccc796-22b3-40e2-b199-dc4d2e6a36b6",
+            "claim_id": "9701764d-0b35-43f7-8c6e-7333b4596d7f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "cooper.richey@enron.com",
@@ -8401,7 +8429,7 @@
             "key": 0
         },
         {
-            "claim_id": "99191af4-ce63-43b5-8c63-51d66be9bfcf",
+            "claim_id": "5e563bb3-d00a-4e13-83f6-c466b29d197b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "debe@fsddatasvc.com",
@@ -8430,7 +8458,7 @@
             "key": 0
         },
         {
-            "claim_id": "765edfda-ee5f-475b-acc3-7cb68977a138",
+            "claim_id": "6ea7a216-394d-41ad-bb14-cdb207211f02",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kolinge@enron.com",
@@ -8459,7 +8487,7 @@
             "key": 0
         },
         {
-            "claim_id": "b6645b34-4763-4b6d-b041-0e38308b30cc",
+            "claim_id": "c400da68-7abd-41f6-a181-4eb96c8fad81",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "cindy.long@enron.com",
@@ -8488,7 +8516,7 @@
             "key": 0
         },
         {
-            "claim_id": "a2547223-fccc-4236-aaeb-22c15408d5e0",
+            "claim_id": "457f4e75-9997-4e4c-b5b1-98b9333bd868",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark@intelligencepress.com",
@@ -8559,7 +8587,7 @@
             "key": 0
         },
         {
-            "claim_id": "6b000b66-f0d2-4259-81d8-252ffe8266d5",
+            "claim_id": "70a73eb9-a4db-457d-9b56-e35dfd6f4e67",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "matthew.lenhart@enron.com",
@@ -8777,7 +8805,7 @@
             "key": 0
         },
         {
-            "claim_id": "e1d20302-b9f6-4d6a-96e8-7f902d692f7b",
+            "claim_id": "34ac0f86-a6ea-4dd0-939a-a09032665a9a",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "alan.comnes@enron.com",
@@ -8813,7 +8841,7 @@
             "key": 0
         },
         {
-            "claim_id": "67672986-1cd4-4fb8-92e6-da810f3b3ac7",
+            "claim_id": "85cd3f54-8dfd-4ff5-9406-fbc41083f603",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "suzanne.nicholie@enron.com",
@@ -8842,7 +8870,7 @@
             "key": 0
         },
         {
-            "claim_id": "fa028439-9bc7-444d-87b0-e76d6a13f38a",
+            "claim_id": "ba4a31a9-66a6-4c14-af34-42fb317d6a24",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "colleen.sullivan@enron.com",
@@ -8899,7 +8927,7 @@
             "key": 0
         },
         {
-            "claim_id": "b26d29fc-b1be-436c-973d-843472e354db",
+            "claim_id": "4c66a950-ecc9-41b1-936e-04db1bcad683",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brad.mcsherry@enron.com",
@@ -8928,7 +8956,7 @@
             "key": 0
         },
         {
-            "claim_id": "43991a77-ef8a-402d-be5a-fcda8d11af3c",
+            "claim_id": "d1c96949-f19e-4185-895a-bd23c98ee3b7",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "bruce.ferrell@enron.com",
@@ -8957,7 +8985,7 @@
             "key": 0
         },
         {
-            "claim_id": "667bcb48-40a9-4cac-99e9-feec55337aea",
+            "claim_id": "a3c160d2-b7db-4d2e-9dcb-5ab1b491aaa1",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mac.d.hargrove@rssmb.com",
@@ -9042,7 +9070,7 @@
             "key": 0
         },
         {
-            "claim_id": "c8543e46-950c-4bbd-88c5-4f31c08ccae6",
+            "claim_id": "8319289b-b819-409e-8f76-f8da7f785493",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stephanie.sever@enron.com",
@@ -9071,7 +9099,7 @@
             "key": 0
         },
         {
-            "claim_id": "c2f4b324-9f6e-431a-8cbd-6f70cd047aef",
+            "claim_id": "ea65acfc-28d4-4ce1-8c1d-b2d2f190746c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stephen.harrington@enron.com",
@@ -9107,7 +9135,7 @@
             "key": 0
         },
         {
-            "claim_id": "8f6d97a0-c301-404b-b65f-1291bd304e63",
+            "claim_id": "48de952b-f339-4bb8-9c03-35753dc2d02d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "sunil.dalal@enron.com",
@@ -9136,7 +9164,7 @@
             "key": 0
         },
         {
-            "claim_id": "f0c05060-a7ca-4d00-accd-9459a1e3fe2b",
+            "claim_id": "d65866cb-35ee-49a3-8d18-53fb7a6dcc22",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "barry.steinhart@enron.com",
@@ -9165,7 +9193,7 @@
             "key": 0
         },
         {
-            "claim_id": "6c08c86b-2feb-4493-9944-b6b07f991394",
+            "claim_id": "89ac88c8-0aed-4762-a1b9-202d873a01c5",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "matt.smith@enron.com",
@@ -9236,7 +9264,7 @@
             "key": 0
         },
         {
-            "claim_id": "9a60e370-f50e-4c89-aaed-c193194f2d0e",
+            "claim_id": "151203c3-e4ae-4540-be63-754c7f96eb4f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "outlook.team@enron.com",
@@ -9272,7 +9300,7 @@
             "key": 0
         },
         {
-            "claim_id": "2f8adb9e-e0bd-40fd-b444-7ec071c50a46",
+            "claim_id": "60e16fca-ff65-4e70-95b1-8add119b8190",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "lisa.jones@enron.com",
@@ -9301,7 +9329,7 @@
             "key": 0
         },
         {
-            "claim_id": "53c68299-8714-459b-a159-51689715f180",
+            "claim_id": "3d3aeb38-eb94-440b-9954-a14cbe767ad0",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jane.tholt@enron.com",
@@ -9393,7 +9421,7 @@
             "key": 0
         },
         {
-            "claim_id": "c47e7b83-2ae7-4282-be87-5b0f4788dce2",
+            "claim_id": "38220529-e529-4719-a48a-75bbdd4be8a0",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "steven.south@enron.com",
@@ -9485,7 +9513,7 @@
             "key": 0
         },
         {
-            "claim_id": "46422641-ebf9-463c-94b0-a192adf5b245",
+            "claim_id": "8ac13bad-a8bc-434e-9a83-0559d4a6bb69",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "hunter.shively@enron.com",
@@ -9591,7 +9619,7 @@
             "key": 0
         },
         {
-            "claim_id": "c2afc479-92a6-415f-a820-225bf07d73d0",
+            "claim_id": "a86b228a-1a9f-4d60-a9f3-d753a84ecddf",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "chris.gaskill@enron.com",
@@ -9620,7 +9648,7 @@
             "key": 0
         },
         {
-            "claim_id": "012f10c4-47ba-41c4-afc3-b101138cb9b0",
+            "claim_id": "99fb5ab9-a57f-4daa-993a-331dd0c32438",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ywang@enron.com",
@@ -9663,7 +9691,7 @@
             "key": 0
         },
         {
-            "claim_id": "bba484f3-e5ab-4f05-9f4f-065dcad98954",
+            "claim_id": "e0ff9d1e-105b-460e-8cf4-cfb5ecd1a698",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "fletcher.sturm@enron.com",
@@ -9720,7 +9748,7 @@
             "key": 0
         },
         {
-            "claim_id": "7039df7b-158d-496b-a2f1-e9147562edd7",
+            "claim_id": "0707438d-9097-43d5-9ad3-b38db1adff6d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "al.pollard@enron.com",
@@ -9798,7 +9826,7 @@
             "key": 0
         },
         {
-            "claim_id": "9534e54d-50c5-4b05-9e27-c861ac54a643",
+            "claim_id": "948adcfa-8b31-4ef3-a760-22900a464173",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "frank.davis@enron.com",
@@ -9827,7 +9855,7 @@
             "key": 0
         },
         {
-            "claim_id": "f06930db-4c0b-4fa6-a930-bb9bc0a2009d",
+            "claim_id": "2d4a7c40-0580-4c14-9790-41bab95d1dee",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "niamh.clarke@enron.com",
@@ -9856,7 +9884,7 @@
             "key": 0
         },
         {
-            "claim_id": "65429e3c-73b9-4c9a-9b87-480a6a932448",
+            "claim_id": "1cdfeedf-1397-433e-8499-43c15f466cb3",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "sonya.clarke@enron.com",
@@ -9885,7 +9913,7 @@
             "key": 0
         },
         {
-            "claim_id": "bd457287-258a-47ee-8f6c-b5dbdda691c7",
+            "claim_id": "25cc3a8b-4bac-476f-b7df-fc7b89c6d76f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "hargr@webtv.net",
@@ -9942,7 +9970,7 @@
             "key": 0
         },
         {
-            "claim_id": "bc551246-1d0a-4319-bc23-68056ec011cf",
+            "claim_id": "7fd6ca11-7d13-4d2e-b45a-829961f9a406",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "celeste.roberts@enron.com",
@@ -9971,7 +9999,7 @@
             "key": 0
         },
         {
-            "claim_id": "458d18fe-108b-4bd9-9e22-e43b8f194d27",
+            "claim_id": "97c7a80a-df69-4add-be78-460c215c558b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brendas@surffree.com",
@@ -10000,7 +10028,7 @@
             "key": 0
         },
         {
-            "claim_id": "e3b8f334-3322-447c-8d93-65c9e77eeb69",
+            "claim_id": "8197d0bc-1bc1-41ea-86b2-6bc4a22eca40",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brendas@tgn.net",
@@ -10029,7 +10057,7 @@
             "key": 0
         },
         {
-            "claim_id": "bc7147aa-2aaa-4d69-b340-4edd96cbf1ec",
+            "claim_id": "b465a6d9-3200-43ab-99db-6809104d0b16",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "gary@creativepanel.com",
@@ -10086,7 +10114,7 @@
             "key": 0
         },
         {
-            "claim_id": "88669171-cbd4-42aa-a292-1d0f0086f0f0",
+            "claim_id": "df0255bd-1647-4b50-84b3-15029eecf188",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "gary.taylor@enron.com",
@@ -10115,7 +10143,7 @@
             "key": 0
         },
         {
-            "claim_id": "734977f3-b0e6-464e-9a28-da35d9ab2767",
+            "claim_id": "704efeb2-a09d-4f6b-94a5-bec22c577021",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "felix.buitron@enron.com",
@@ -10158,7 +10186,7 @@
             "key": 0
         },
         {
-            "claim_id": "71a91679-2733-46e9-b89a-cf1897fa5b3e",
+            "claim_id": "919d7f34-2509-443c-b5ad-41b45c862a86",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ray.alvarez@enron.com",
@@ -10215,7 +10243,7 @@
             "key": 0
         },
         {
-            "claim_id": "1d3cabe1-1800-4d9b-a41b-43cb9e5c4b32",
+            "claim_id": "692ca882-2d9d-4abf-b582-e71e969b8032",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "torrey.moorer@enron.com",
@@ -10244,7 +10272,7 @@
             "key": 0
         },
         {
-            "claim_id": "bd3b6788-b6aa-4cdd-aa5e-3c7fa7a4dac0",
+            "claim_id": "f713c238-9114-453d-9c7f-f3abe5b438c4",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scott.carter@chase.com",
@@ -10273,7 +10301,7 @@
             "key": 0
         },
         {
-            "claim_id": "5ff11d50-f976-48cc-8724-d91545e83f6b",
+            "claim_id": "d2c34cb7-ddc1-4825-9d2b-f87a9d8b4538",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeff.richter@enron.com",
@@ -10393,7 +10421,7 @@
             "key": 0
         },
         {
-            "claim_id": "6fc2ade2-4d04-4f7b-bc7a-53a16989f786",
+            "claim_id": "55753fab-e17a-4ee3-a0d9-008502e718dc",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "robert.badeer@enron.com",
@@ -10450,7 +10478,7 @@
             "key": 0
         },
         {
-            "claim_id": "9c7e9a94-3fc6-4b4e-9cbd-e729cd13e47d",
+            "claim_id": "4b9938d9-98b1-4075-a8d8-2e92ad366c1f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ned.higgins@enron.com",
@@ -10486,7 +10514,7 @@
             "key": 0
         },
         {
-            "claim_id": "6089113a-da4e-419b-817b-fa5b1af70b2d",
+            "claim_id": "2d699864-b4d4-4e4a-beba-4a1e732f1a27",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeffrey.gossett@enron.com",
@@ -10522,7 +10550,7 @@
             "key": 0
         },
         {
-            "claim_id": "cabca26f-4702-4d77-b322-bef3e38ec2ac",
+            "claim_id": "69eee033-bb19-47c5-908a-d12f7edeff85",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "maryrichards7@hotmail.com",
@@ -10754,7 +10782,7 @@
             "key": 0
         },
         {
-            "claim_id": "fb61bfd2-0353-4baa-9aad-1942f776fd1a",
+            "claim_id": "ff8191a2-64dd-408f-96ca-c4d4be3981be",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "tara.sweitzer@enron.com",
@@ -10839,7 +10867,7 @@
             "key": 0
         },
         {
-            "claim_id": "ecf72d33-e71a-453d-a9ee-cf795937deb2",
+            "claim_id": "7caf961d-d1d9-49f4-bf49-af36b6111db4",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "dawn.kenne@enron.com",
@@ -10889,7 +10917,7 @@
             "key": 0
         },
         {
-            "claim_id": "9e86744e-2080-4a3e-bd59-79010091b8d3",
+            "claim_id": "0434aff9-a75c-4b8a-9704-66a395be7d25",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "laird.dyer@enron.com",
@@ -10918,7 +10946,7 @@
             "key": 0
         },
         {
-            "claim_id": "cbb4060b-8ad6-4bbd-b343-0a92e8371106",
+            "claim_id": "52c49994-452a-45eb-b7b6-9e56f45d1b94",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "hector.campos@enron.com",
@@ -10947,7 +10975,7 @@
             "key": 0
         },
         {
-            "claim_id": "82102494-0c51-4c44-82d2-6ba9dbcbb09a",
+            "claim_id": "cc11f2ee-de39-4b51-9bdc-6e423185d775",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "david.wile@enron.com",
@@ -10976,7 +11004,7 @@
             "key": 0
         },
         {
-            "claim_id": "c884d235-4b38-43cf-8c37-532abbd63121",
+            "claim_id": "6f3bd511-b8b1-458f-92c7-dbfb50e12ff3",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "suzanne.marshall@enron.com",
@@ -11005,7 +11033,7 @@
             "key": 0
         },
         {
-            "claim_id": "aafae116-cb0f-4ee0-a640-be4959adaab7",
+            "claim_id": "69ddf95c-50a3-4dcb-a6f5-4702c9124c48",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "beth.perlman@enron.com",
@@ -11041,7 +11069,7 @@
             "key": 0
         },
         {
-            "claim_id": "7047c58d-4191-4409-b09c-827ef975e14e",
+            "claim_id": "ea47d916-e7ee-407b-8927-e8e49109b0d9",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mac05@flash.net",
@@ -11070,7 +11098,7 @@
             "key": 0
         },
         {
-            "claim_id": "14e3136f-7f21-4599-9e36-fd1a563c19ea",
+            "claim_id": "10d55312-db56-46b7-b5d0-df961453bb2e",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.miles@enron.com",
@@ -11099,7 +11127,7 @@
             "key": 0
         },
         {
-            "claim_id": "f40fa214-6bbf-459f-9b04-3c15b9d85474",
+            "claim_id": "7d34163d-3348-4162-9ca3-af29961d319d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stephane.brodeur@enron.com",
@@ -11128,7 +11156,7 @@
             "key": 0
         },
         {
-            "claim_id": "23ce990a-daf0-4ce3-bafd-ac2922b13410",
+            "claim_id": "d3216cf1-0db3-40b8-b02e-0bde17553c3f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brian.hoskins@enron.com",
@@ -11157,7 +11185,7 @@
             "key": 0
         },
         {
-            "claim_id": "089444a6-6c80-45f6-9bf5-ba9cd0efd187",
+            "claim_id": "b36241d1-e920-4f50-a460-91412b1ce0cd",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "eric.benson@enron.com",
@@ -11186,7 +11214,7 @@
             "key": 0
         },
         {
-            "claim_id": "e99675e9-5909-46b2-ad0b-18902c505cd6",
+            "claim_id": "1aa99a34-0a0a-465b-950b-d21dd6e94919",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "dwagman@ftenergy.com",
@@ -11215,7 +11243,7 @@
             "key": 0
         },
         {
-            "claim_id": "288e3c5d-926e-41f5-b859-b3f66e494e86",
+            "claim_id": "f36a7851-d474-45ec-b5dd-99d27653c7a9",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "monique.sanchez@enron.com",
@@ -11293,7 +11321,7 @@
             "key": 0
         },
         {
-            "claim_id": "3059aec6-e7e0-4acc-bc6c-544c9757354d",
+            "claim_id": "eebcee44-c847-47f1-8bed-177d3c608d12",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "william.kelly@enron.com",
@@ -11364,7 +11392,7 @@
             "key": 0
         },
         {
-            "claim_id": "5183b488-0c05-4eb7-8ee1-7e63367c4558",
+            "claim_id": "f7e38838-9b8b-4801-956f-cde4a32770d4",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "steve.jackson@enron.com",
@@ -11393,7 +11421,7 @@
             "key": 0
         },
         {
-            "claim_id": "7c5fb58d-96cb-4da9-9c52-d0c4886ed9c2",
+            "claim_id": "41a9f372-13c9-4fc3-b988-735dc4d8002a",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brent.price@enron.com",
@@ -11422,7 +11450,7 @@
             "key": 0
         },
         {
-            "claim_id": "09712430-f57b-4e57-8d17-9a2bc8771d22",
+            "claim_id": "ccf468a4-2e3a-4352-9d16-f336d873e5ad",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "susan.scott@enron.com",
@@ -11465,7 +11493,7 @@
             "key": 0
         },
         {
-            "claim_id": "5cd7e8b1-0bf7-4b6a-b668-046dac4192e0",
+            "claim_id": "df7f20f5-331f-42af-983b-89bd57914b48",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stephen.wolfe@enron.com",
@@ -11494,7 +11522,7 @@
             "key": 0
         },
         {
-            "claim_id": "3dd828a8-2f14-4843-b254-c07f95ef829f",
+            "claim_id": "067df17f-d485-456f-a8bb-1bd23e300c91",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jim.brysch@enron.com",
@@ -11537,7 +11565,7 @@
             "key": 0
         },
         {
-            "claim_id": "3815c2e1-246d-4a65-8b96-449a9a071684",
+            "claim_id": "be5c0f90-6a6a-4e1c-8c83-3b48584d3415",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "imelda.frayre@enron.com",
@@ -11566,7 +11594,7 @@
             "key": 0
         },
         {
-            "claim_id": "141473bf-a39f-4085-bbab-2efb37cffc97",
+            "claim_id": "c9af452c-6c64-45fc-94e7-bd598171b4c5",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "george.rahal@acnpower.com",
@@ -11595,7 +11623,7 @@
             "key": 0
         },
         {
-            "claim_id": "6d84c09a-13fb-4b35-858a-29055c7693d1",
+            "claim_id": "7d2d33c2-8088-4215-b495-d108950b386c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kimberly.olinger@enron.com",
@@ -11624,7 +11652,7 @@
             "key": 0
         },
         {
-            "claim_id": "38e93978-28ca-4f8b-9ed2-789ac7555044",
+            "claim_id": "4eaf69ca-259f-4f44-87c9-7a161761612d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "robert.superty@enron.com",
@@ -11653,7 +11681,7 @@
             "key": 0
         },
         {
-            "claim_id": "68a5b846-689c-4ada-961c-9b4a30ee7414",
+            "claim_id": "8cae495f-8784-4b81-b219-4dab0a00f324",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "julie.gomez@enron.com",
@@ -11696,7 +11724,7 @@
             "key": 0
         },
         {
-            "claim_id": "c5fb1679-b053-4246-925e-ae855155829b",
+            "claim_id": "d86b6994-3a9d-4df5-b11a-5e5e7a7c7f99",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "candace.womack@enron.com",
@@ -11725,7 +11753,7 @@
             "key": 0
         },
         {
-            "claim_id": "b7bbff49-a7b7-4de0-b705-fbff91ecf589",
+            "claim_id": "dc752857-93b9-4fe8-bc55-3c79ebf0185f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "slewis2@enron.com",
@@ -11754,7 +11782,7 @@
             "key": 0
         },
         {
-            "claim_id": "ea08b3ea-1ce2-4043-8252-f3dea0308373",
+            "claim_id": "5f79dba2-a603-4c82-b96e-407d5c7262b1",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brenda.flores-cuellar@enron.com",
@@ -11797,7 +11825,7 @@
             "key": 0
         },
         {
-            "claim_id": "9f6ffe7a-0fd9-49dd-be7a-dcae2f40e1d2",
+            "claim_id": "e18420dc-9c6a-4c0f-bcc7-8caf1c1bc65f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kevin.mcgowan@enron.com",
@@ -11826,7 +11854,7 @@
             "key": 0
         },
         {
-            "claim_id": "2a84b945-570d-4143-89a6-a1d203a85437",
+            "claim_id": "967fb437-8154-4713-9134-019d8a6a67da",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mary.gray@enron.com",
@@ -11883,7 +11911,7 @@
             "key": 0
         },
         {
-            "claim_id": "c0a7ae43-806d-451e-99b1-d8b325523d8e",
+            "claim_id": "9104f5cf-48c3-49b8-8326-1ba3a8e3f7cd",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "patti99@hotmail.com",
@@ -11912,7 +11940,7 @@
             "key": 0
         },
         {
-            "claim_id": "da04aaba-2f00-4579-adc0-fd21ca58e76f",
+            "claim_id": "3e35e61c-ad0d-4e27-81d1-16619703ad14",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "naomi.johnston@enron.com",
@@ -11941,7 +11969,7 @@
             "key": 0
         },
         {
-            "claim_id": "7ba8efc8-490f-421a-b568-3b830a64647b",
+            "claim_id": "aa12f5e7-c149-49a1-948e-5f7e409c7ce3",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "andrea.richards@enron.com",
@@ -12012,7 +12040,7 @@
             "key": 0
         },
         {
-            "claim_id": "0f15a84e-ae7e-4b03-8a0b-e8270e3a9fc6",
+            "claim_id": "6a752741-f827-499b-94ac-e2b4608b17b1",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stanley.horton@enron.com",
@@ -12048,7 +12076,7 @@
             "key": 0
         },
         {
-            "claim_id": "776c2ea3-7fe1-4d63-8388-6ff4691fd651",
+            "claim_id": "815f276f-7444-478b-b06e-5d6034e412e8",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "dmccarty@enron.com",
@@ -12084,7 +12112,7 @@
             "key": 0
         },
         {
-            "claim_id": "db7a8218-a723-4eb9-ae72-a31a73502ba4",
+            "claim_id": "f732af14-c3a1-4e1a-85e7-02a6371282a4",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "karen.buckley@enron.com",
@@ -12134,7 +12162,7 @@
             "key": 0
         },
         {
-            "claim_id": "cbd48422-529e-4288-b5bc-8567e463ba4d",
+            "claim_id": "0d518ebe-0b4b-4bcf-a4e2-13b7258b952c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "johnniebrown@juno.com",
@@ -12170,7 +12198,7 @@
             "key": 0
         },
         {
-            "claim_id": "1114ff05-58a3-4b5d-8cd2-006164884bcc",
+            "claim_id": "df7565d2-7ee8-48d5-891a-dc3fbc9f4861",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "chad.landry@enron.com",
@@ -12220,7 +12248,7 @@
             "key": 0
         },
         {
-            "claim_id": "2cb5d0d7-50ff-4147-80df-3fa2a42fae91",
+            "claim_id": "24e0351d-999a-43e9-a19d-4ab2cc024d34",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "llewter@austin.rr.com",
@@ -12347,7 +12375,7 @@
             "key": 0
         },
         {
-            "claim_id": "5a95826c-ef2b-4ef7-980e-0e581cb389cd",
+            "claim_id": "de9f0f4a-f616-414d-baaa-ef7688e138ed",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "nicholasnelson@centurytel.net",
@@ -12376,7 +12404,7 @@
             "key": 0
         },
         {
-            "claim_id": "bea93c08-6074-41ce-a7b5-f89fb9253df5",
+            "claim_id": "12441dab-2935-440a-a15c-5b740ec1f239",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "julie.pechersky@enron.com",
@@ -12405,7 +12433,7 @@
             "key": 0
         },
         {
-            "claim_id": "d7cfd045-a4c7-4c0a-8ea2-48c0c7256d44",
+            "claim_id": "6547af9e-1fe0-4f13-b1cf-ff3194894dfc",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jhershey@sempratrading.com",
@@ -12448,7 +12476,7 @@
             "key": 0
         },
         {
-            "claim_id": "d1a2c187-e095-4fe2-911f-9ad4d5e85838",
+            "claim_id": "67cebdeb-6125-436e-a879-d37cade83ad5",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.taylor@enron.com",
@@ -12477,7 +12505,7 @@
             "key": 0
         },
         {
-            "claim_id": "5b97341f-255f-425d-b227-0a982bc281b2",
+            "claim_id": "0ae87277-ab8f-453e-9e40-c4225bf10e88",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jacquestc@aol.com",
@@ -12646,7 +12674,7 @@
             "key": 0
         },
         {
-            "claim_id": "087112b0-9f04-4b92-995a-0fa9bbcb760f",
+            "claim_id": "c02bd80b-f209-4ce3-a3f1-b41dd0427bb3",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "sara.solorio@enron.com",
@@ -12675,7 +12703,7 @@
             "key": 0
         },
         {
-            "claim_id": "9b34ab11-4bcd-48c1-bd97-dd453d155de4",
+            "claim_id": "3a7a72ac-af0c-4c2a-850a-f45fb7650eb7",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scfatkfa@caprock.net",
@@ -12718,7 +12746,7 @@
             "key": 0
         },
         {
-            "claim_id": "ee8aec75-f39f-4791-acf1-b44158c72b31",
+            "claim_id": "5a4ad556-aa78-4d13-8b41-b76951f82c07",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scsatkfa@caprock.net",
@@ -12761,7 +12789,7 @@
             "key": 0
         },
         {
-            "claim_id": "d5f3818e-2aaa-4e8d-9be0-c3174db7248c",
+            "claim_id": "5823c9e8-5ccf-4271-b0b7-c78f40a03109",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "barry.tycholiz@enron.com",
@@ -12797,7 +12825,7 @@
             "key": 0
         },
         {
-            "claim_id": "f89a8748-7d64-46ab-a6e1-72f5e69948a0",
+            "claim_id": "394470a8-fe36-4fcd-b220-9dc56a1c3485",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "dennisjr@ev1.net",
@@ -12826,7 +12854,7 @@
             "key": 0
         },
         {
-            "claim_id": "4fe702cd-d012-46b4-ba98-d9afca3a8805",
+            "claim_id": "631926d3-c29f-46c7-a6c7-51de453740d7",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "denisjr@ev1.net",
@@ -12855,7 +12883,7 @@
             "key": 0
         },
         {
-            "claim_id": "cfd86789-a2be-41b5-9993-8505b1dcf9ca",
+            "claim_id": "6112c096-9e01-4522-b3e1-01d15aeaba8b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "gthorse@keyad.com",
@@ -12933,7 +12961,7 @@
             "key": 0
         },
         {
-            "claim_id": "410aea58-c9be-4b65-bf83-963af467a4ec",
+            "claim_id": "a2dae75a-2c8c-406e-9cb7-d76b7702d28b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jess.hewitt@enron.com",
@@ -12962,7 +12990,7 @@
             "key": 0
         },
         {
-            "claim_id": "f80a986e-4fa9-4d13-a6c3-6d735dd95d47",
+            "claim_id": "f8efba89-778c-450f-8b53-f9dd1f256e76",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "todd.burke@enron.com",
@@ -12984,7 +13012,7 @@
             "key": 0
         },
         {
-            "claim_id": "ad79e292-1f43-4ce2-b222-95055ca45a08",
+            "claim_id": "e4d85501-e08a-4399-a440-f1717f948cde",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kim.bolton@enron.com",
@@ -13006,7 +13034,7 @@
             "key": 0
         },
         {
-            "claim_id": "3417c78e-edd1-476d-8a4f-2dc8f914f941",
+            "claim_id": "8a643be5-d971-4cc5-a57d-4180c837dc7d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "djack@keyad.com",
@@ -13035,7 +13063,7 @@
             "key": 0
         },
         {
-            "claim_id": "a18b254b-1203-40c3-b4b2-0eef5465a06c",
+            "claim_id": "c918eacd-1f17-4a81-bdcd-15d4c1b7061b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "djack@stic.net",
@@ -13057,7 +13085,7 @@
             "key": 0
         },
         {
-            "claim_id": "64006dfb-e46c-43f9-8114-9a1cadce45cb",
+            "claim_id": "4037f911-7d8e-40a0-b7b9-6101c87c8f45",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jim123@pdq.net",
@@ -13086,7 +13114,7 @@
             "key": 0
         },
         {
-            "claim_id": "6a8fd95d-bd7c-4737-9e7e-06f90c4dfed6",
+            "claim_id": "c3838a8e-c858-471a-8057-8b993d2f673d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "angela.collins@enron.com",
@@ -13108,7 +13136,7 @@
             "key": 0
         },
         {
-            "claim_id": "39db14ad-1dc5-4243-ade7-27b1e34b8d1b",
+            "claim_id": "11bfa4e7-0908-481d-a169-3a4c7c17ea65",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "don.black@enron.com",
@@ -13130,7 +13158,7 @@
             "key": 0
         },
         {
-            "claim_id": "968aa6a9-2548-45f7-92f8-54f78eccc8cc",
+            "claim_id": "feddf90a-ef50-4193-b70e-0f6b50a42aea",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "bnelson@situscos.com",
@@ -13152,7 +13180,7 @@
             "key": 0
         },
         {
-            "claim_id": "300effe1-41a0-4012-a73d-4bf2b943c965",
+            "claim_id": "c8efe6d4-0196-435f-a17e-3cba405dc07c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "christi.nicolay@enron.com",
@@ -13195,7 +13223,7 @@
             "key": 0
         },
         {
-            "claim_id": "82f81908-6f90-445b-a80e-101b9df60344",
+            "claim_id": "a8d498ec-c1a7-4deb-8a2b-04365ad00b43",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeff.dasovich@enron.com",
@@ -13224,7 +13252,7 @@
             "key": 0
         },
         {
-            "claim_id": "32fb30df-3321-4b80-9241-699e87e81062",
+            "claim_id": "172b6987-a6e1-4e8e-9064-b745531f7ac0",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "joe.hartsoe@enron.com",
@@ -13253,7 +13281,7 @@
             "key": 0
         },
         {
-            "claim_id": "d240d5ee-edf1-4adf-9d6c-f9adab51570f",
+            "claim_id": "4e593031-0a44-47ef-9952-bfe565ff3dd3",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mary.hain@enron.com",
@@ -13282,7 +13310,7 @@
             "key": 0
         },
         {
-            "claim_id": "a6b44e00-3965-4cf4-b95e-b2c9544a638a",
+            "claim_id": "284c72be-b961-4db8-bd66-a824d0ebc626",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -13311,7 +13339,7 @@
             "key": 0
         },
         {
-            "claim_id": "5cab4058-8495-4a57-aae5-29d982ae83b3",
+            "claim_id": "6e81c80a-df10-4f13-bf7b-a6e7ed6f342c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pkaufma@enron.com",
@@ -13340,7 +13368,7 @@
             "key": 0
         },
         {
-            "claim_id": "d5f67bd5-1005-4df3-9b82-940d27886b07",
+            "claim_id": "6015f700-060a-4c06-b400-eb2dbfe80e4e",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "richard.sanders@enron.com",
@@ -13369,7 +13397,7 @@
             "key": 0
         },
         {
-            "claim_id": "56ae8cc1-6ed9-40bd-b052-f0333cc1332d",
+            "claim_id": "51499a6c-60f6-4421-9b9c-73b9b9ccf5bd",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "richard.shapiro@enron.com",
@@ -13398,7 +13426,7 @@
             "key": 0
         },
         {
-            "claim_id": "7aaa5269-4e39-4bb5-82eb-2ec927308dc7",
+            "claim_id": "5a55313c-4172-4faa-9a15-eea146e00859",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stephanie.miller@enron.com",
@@ -13427,7 +13455,7 @@
             "key": 0
         },
         {
-            "claim_id": "41fd68fd-e3be-4b43-b77b-6cd0a5594292",
+            "claim_id": "c1139ca5-d94e-4f15-80cd-228428ae8da2",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "steven.kean@enron.com",
@@ -13463,7 +13491,7 @@
             "key": 0
         },
         {
-            "claim_id": "34221c89-fea6-4835-806b-e192e175a244",
+            "claim_id": "91df393f-f558-481f-8b5e-ff2e3d8d4ab4",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "susan.mara@enron.com",
@@ -13492,7 +13520,7 @@
             "key": 0
         },
         {
-            "claim_id": "ce8f720b-f413-43dd-8040-f75a4eb5fdaf",
+            "claim_id": "fed0f469-5311-4091-8c98-7ab741e12a72",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "rebecca.cantrell@enron.com",
@@ -13521,7 +13549,7 @@
             "key": 0
         },
         {
-            "claim_id": "9e2aae3f-c3d5-43c3-b0f2-274bd730461c",
+            "claim_id": "c2315097-09ec-4875-aa44-527684a66bae",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "tara.piazze@enron.com",
@@ -13543,7 +13571,7 @@
             "key": 0
         },
         {
-            "claim_id": "c200e446-bcca-4ac6-9b3a-3aa39f0177b8",
+            "claim_id": "80f8d84e-2ff1-43e4-92b1-34c2277061cb",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scott.tholan@enron.com",
@@ -13572,7 +13600,7 @@
             "key": 0
         },
         {
-            "claim_id": "063b1e9a-1b7c-487d-9b80-cb98e95d681c",
+            "claim_id": "4fcc51de-4a78-4e28-a766-3e99c456213b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "body.shop@enron.com",
@@ -13594,7 +13622,7 @@
             "key": 0
         },
         {
-            "claim_id": "edbeae4e-7bd0-4d95-aa69-814a983e99e5",
+            "claim_id": "a4d339ac-b4b8-408a-bdc8-49423425eda4",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeanie.slone@enron.com",
@@ -13616,7 +13644,7 @@
             "key": 0
         },
         {
-            "claim_id": "a738c1f1-0151-40b7-ada2-d10f34c20e15",
+            "claim_id": "f186b997-2f57-4f60-bc1a-f632af3831cd",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "andrew_m_ozuna@mail.bankone.com",
@@ -13638,7 +13666,7 @@
             "key": 0
         },
         {
-            "claim_id": "d8e8fbc0-49c7-44de-a8d1-f5bf72fd1d53",
+            "claim_id": "14c83242-2a22-45e2-9017-bc81627a2df5",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "lodonnell@spbank.com",
@@ -13667,7 +13695,7 @@
             "key": 0
         },
         {
-            "claim_id": "e36af18f-d9d4-43e1-920a-ef59750baf7f",
+            "claim_id": "9c898f2d-fcd3-4a83-b2fa-989c0a263f97",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "johnny.palmer@enron.com",
@@ -13689,7 +13717,7 @@
             "key": 0
         },
         {
-            "claim_id": "a7dc0bac-0478-4fbd-84ac-693cb6930805",
+            "claim_id": "54a2c17d-0b2b-405d-9427-f936ac30435b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.whitt@enron.com",
@@ -13711,7 +13739,7 @@
             "key": 0
         },
         {
-            "claim_id": "b4878227-92c1-4a0f-a174-eebac293f8aa",
+            "claim_id": "e2be3a42-25f7-4278-847f-004f5711e65f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "gallen@thermon.com",
@@ -13740,7 +13768,7 @@
             "key": 0
         },
         {
-            "claim_id": "0a6ebc0e-acf9-4f30-a7bd-21c57732ac92",
+            "claim_id": "e470b1ee-b656-40a7-b317-86eb9c6bed56",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "bridgette.anderson@enron.com",
@@ -13762,7 +13790,7 @@
             "key": 0
         },
         {
-            "claim_id": "36378bd5-21cd-4b67-944a-bc3ebfe76e4c",
+            "claim_id": "b972a7af-af63-4a42-b0e9-df4e9e61a4f2",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@hotmail.com",
@@ -13784,7 +13812,7 @@
             "key": 0
         },
         {
-            "claim_id": "0e582a64-f3a7-4d01-be02-fccbebc8d7c3",
+            "claim_id": "ed290202-37aa-4611-b2a3-3516ad74ce43",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "sally.beck@enron.com",
@@ -13806,7 +13834,7 @@
             "key": 0
         },
         {
-            "claim_id": "faad5de5-3ec1-40e7-900a-aa42bfa57a9d",
+            "claim_id": "33beba4e-6bde-4e0c-b494-ed583499147b",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "info@geoswan.com",
@@ -13828,7 +13856,7 @@
             "key": 0
         },
         {
-            "claim_id": "3f921a68-b46d-4daa-a72b-3bf1a5a7a784",
+            "claim_id": "6ae5407c-01f0-47b0-98a7-17992610999a",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "8774820206@pagenetmessage.net",
@@ -13850,7 +13878,7 @@
             "key": 0
         },
         {
-            "claim_id": "22a893e0-e277-48db-a481-26bdc2677759",
+            "claim_id": "d806e644-0de7-419b-ba50-d270740e8220",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "patti.sullivan@enron.com",
@@ -13879,7 +13907,7 @@
             "key": 0
         },
         {
-            "claim_id": "1e526b51-ba15-4bd2-8ab5-c52aa8cce7e3",
+            "claim_id": "24fe9fba-d0e0-4bef-933f-e1f686768d57",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "nick.politis@enron.com",
@@ -13901,7 +13929,7 @@
             "key": 0
         },
         {
-            "claim_id": "08584c68-82f1-4657-809f-4aa22051830b",
+            "claim_id": "f68a5790-6d10-4841-8431-8147129de5f2",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "del@living.com",
@@ -13923,7 +13951,7 @@
             "key": 0
         },
         {
-            "claim_id": "ba7156ae-1d6c-4259-9d62-5c8c4032298b",
+            "claim_id": "a01879c2-581f-40df-b2fd-da2b35f24168",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kristin.walsh@enron.com",
@@ -13945,7 +13973,7 @@
             "key": 0
         },
         {
-            "claim_id": "22931dc3-b457-41ae-b567-6de14a1b5a0a",
+            "claim_id": "0fda32d4-f930-435a-bc00-218f74fa1985",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ben.jacoby@enron.com",
@@ -13967,7 +13995,7 @@
             "key": 0
         },
         {
-            "claim_id": "79c8a91f-9e1f-410d-a8ea-e2f77607a4fd",
+            "claim_id": "d0aaf7ab-9908-4beb-8ff3-3bb8ad9963cd",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "vladimir.gorny@enron.com",
@@ -13996,7 +14024,7 @@
             "key": 0
         },
         {
-            "claim_id": "f0d00d8e-5480-4609-ab01-f5c7cff46fad",
+            "claim_id": "7652a4fd-ef18-4946-958a-82a79528f2e6",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "tbland@enron.com",
@@ -14018,7 +14046,7 @@
             "key": 0
         },
         {
-            "claim_id": "28661817-ce1e-433b-9745-02c79936ca2d",
+            "claim_id": "6f5b1250-1255-4d17-b237-e310cff13dd3",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "fescofield@1411west.com",
@@ -14040,7 +14068,7 @@
             "key": 0
         },
         {
-            "claim_id": "a3422fec-d945-4ad0-9e21-12f7d08c4741",
+            "claim_id": "2b335d39-1eef-4cd5-a486-fd051ddd8101",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jason.moore@enron.com",
@@ -14062,7 +14090,7 @@
             "key": 0
         },
         {
-            "claim_id": "e72fb1c1-ba1d-49d4-a697-2b4dff134e90",
+            "claim_id": "fab4ec66-01ee-494b-960a-4ec404831b6d",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jonathan.mckay@enron.com",
@@ -14084,7 +14112,7 @@
             "key": 0
         },
         {
-            "claim_id": "b1cb7287-3785-45a0-9e84-14b86682a2fd",
+            "claim_id": "3de29438-b561-46f3-ba88-6a7cbf107d39",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "llewter@palm.net",
@@ -14106,7 +14134,7 @@
             "key": 0
         },
         {
-            "claim_id": "eda5ce98-d475-430b-ae44-5a97dbe11a15",
+            "claim_id": "7c086185-a00c-4a09-9b1f-581c6048b38f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "paul.kaufman@enron.com",
@@ -14128,7 +14156,7 @@
             "key": 0
         },
         {
-            "claim_id": "c64e297b-b193-4b4f-a5c4-7afd202d7a55",
+            "claim_id": "b5141a1a-e6b2-4565-8e0c-5caca54d2508",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "faith.killen@enron.com",
@@ -14150,7 +14178,7 @@
             "key": 0
         },
         {
-            "claim_id": "61984fee-10cc-4dd7-af14-8039f9903181",
+            "claim_id": "1e592c8d-2f6a-45b6-b3c5-d48fbd9b33e9",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "colin.tonks@enron.com",
@@ -14172,7 +14200,7 @@
             "key": 0
         },
         {
-            "claim_id": "f926b07b-41e1-4d89-9f6d-aeeeb3823290",
+            "claim_id": "af502f56-827e-4597-92d7-52fd9e6692fb",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "bob.schorr@enron.com",
@@ -14208,7 +14236,7 @@
             "key": 0
         },
         {
-            "claim_id": "432d770a-3fff-4cda-9173-6736bdc10212",
+            "claim_id": "4cb9c14e-ccd7-486c-825b-841c62625886",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stephen.stock@enron.com",
@@ -14230,7 +14258,7 @@
             "key": 0
         },
         {
-            "claim_id": "7537c41e-eea1-4978-9502-eb4d656b44a0",
+            "claim_id": "93f31622-853d-4d1a-9bc2-768feec9d1bc",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "anne.bike@enron.com",
@@ -14252,7 +14280,7 @@
             "key": 0
         },
         {
-            "claim_id": "2a2b5f8e-6d1c-4197-8d11-71a16f05784b",
+            "claim_id": "e8bd217c-4336-4f78-8426-35cebd99b52c",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "bob.m.hall@enron.com",
@@ -14281,7 +14309,7 @@
             "key": 0
         },
         {
-            "claim_id": "329e5e54-d0db-4271-9a4d-30412a952a79",
+            "claim_id": "b1d01562-54d5-4f00-af6f-69dfdac5b0a9",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "andy.zipper@enron.com",
@@ -14310,7 +14338,7 @@
             "key": 0
         },
         {
-            "claim_id": "f67ef3d5-3d9b-44d2-a918-cb80d196a13d",
+            "claim_id": "d47c3f82-0309-4b06-b291-fef8f92c4900",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "rbandekow@home.com",
@@ -14332,7 +14360,7 @@
             "key": 0
         },
         {
-            "claim_id": "7a125552-a331-4f62-a3c5-fdcc7e10772b",
+            "claim_id": "702ed611-6cc2-4988-9b9f-ae7c9d2df271",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jedglick@hotmail.com",
@@ -14354,7 +14382,7 @@
             "key": 0
         },
         {
-            "claim_id": "9684d387-b3a4-40b0-97ff-0849465a23bb",
+            "claim_id": "c3cfb4fa-c4f2-4dd0-9dec-e30a83b647fc",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mary@enron.com",
@@ -14376,7 +14404,7 @@
             "key": 0
         },
         {
-            "claim_id": "c78b6fc3-1d9e-4bbe-b956-676cb23a20da",
+            "claim_id": "010f8d24-4360-4909-94f3-4f346cb52a61",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scott.neal@enron.com",
@@ -14398,7 +14426,7 @@
             "key": 0
         },
         {
-            "claim_id": "74a707fa-3457-451b-a888-bbefc233ae52",
+            "claim_id": "6c20d1e9-2df7-476d-a1cf-3ea10786d25f",
             "subject_id": "phillip.allen@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.arnold@enron.com",
@@ -14420,7 +14448,7 @@
             "key": 0
         },
         {
-            "claim_id": "b800b013-177b-44b0-a194-57d1ca170516",
+            "claim_id": "98334a6d-db60-42ec-b64d-567eb2c520ac",
             "subject_id": "Phillip Allen",
             "relation": "WORKS_FOR",
             "object_id": "Enron",
@@ -14428,8 +14456,8 @@
                 {
                     "source_id": "18782981.1075855378110.JavaMail.evans@thyme",
                     "excerpt": "phillip.allen@enron.com",
-                    "start_offset": 0,
-                    "end_offset": 23,
+                    "start_offset": 10,
+                    "end_offset": 33,
                     "timestamp": "2001-05-14 16:39:00-07:00"
                 }
             ],
@@ -14442,7 +14470,7 @@
             "key": 0
         },
         {
-            "claim_id": "3bd0044e-2104-4fdc-9497-09b9437d82e3",
+            "claim_id": "39249d75-53e4-4941-ad1c-539ffdf63a1f",
             "subject_id": "Phillip Allen",
             "relation": "DISCUSSED_TOPIC",
             "object_id": "forecast",
@@ -14451,7 +14479,7 @@
                     "source_id": "18782981.1075855378110.JavaMail.evans@thyme",
                     "excerpt": "Here is our forecast",
                     "start_offset": 0,
-                    "end_offset": 20,
+                    "end_offset": 21,
                     "timestamp": "2001-05-14 16:39:00-07:00"
                 }
             ],
@@ -14464,7 +14492,7 @@
             "key": 0
         },
         {
-            "claim_id": "49579d7f-46bc-483b-a780-e20ed7385047",
+            "claim_id": "89057c04-4f10-4594-9934-af0279780731",
             "subject_id": "Tim Belden",
             "relation": "WORKS_FOR",
             "object_id": "Enron",
@@ -14472,8 +14500,8 @@
                 {
                     "source_id": "18782981.1075855378110.JavaMail.evans@thyme",
                     "excerpt": "tim.belden@enron.com",
-                    "start_offset": 0,
-                    "end_offset": 20,
+                    "start_offset": 45,
+                    "end_offset": 65,
                     "timestamp": "2001-05-14 16:39:00-07:00"
                 }
             ],
@@ -14486,7 +14514,102 @@
             "key": 0
         },
         {
-            "claim_id": "af08f21a-d46f-45eb-97c4-32c01004b41a",
+            "claim_id": "42f79623-4405-4d3b-a631-3571808d2029",
+            "subject_id": "Tim Belden",
+            "relation": "DISCUSSED_TOPIC",
+            "object_id": "forecast",
+            "evidence": [
+                {
+                    "source_id": "18782981.1075855378110.JavaMail.evans@thyme",
+                    "excerpt": "Here is our forecast",
+                    "start_offset": 0,
+                    "end_offset": 21,
+                    "timestamp": "2001-05-14 16:39:00-07:00"
+                }
+            ],
+            "valid_from": "2001-05-14 16:39:00-07:00",
+            "valid_until": null,
+            "status": "active",
+            "version": "v1",
+            "source": "Tim Belden",
+            "target": "forecast",
+            "key": 0
+        },
+        {
+            "claim_id": "5c106041-3b46-4be5-b5ea-e41eea5f6d2f",
+            "subject_id": "phillip_allen",
+            "relation": "WORKS_FOR",
+            "object_id": "enron",
+            "evidence": [
+                {
+                    "source_id": "15464986.1075855378456.JavaMail.evans@thyme",
+                    "excerpt": "phillip.allen@enron.com",
+                    "start_offset": 100,
+                    "end_offset": 125,
+                    "timestamp": "2001-05-04 13:51:00-07:00"
+                }
+            ],
+            "valid_from": "2001-05-04 13:51:00-07:00",
+            "valid_until": null,
+            "status": "active",
+            "version": "v1",
+            "source": "phillip_allen",
+            "target": "enron",
+            "key": 0
+        },
+        {
+            "claim_id": "00bdcb31-437b-478d-ac53-e920d97a530a",
+            "subject_id": "phillip_allen",
+            "relation": "DISCUSSED_TOPIC",
+            "object_id": "austin_trip_discussion",
+            "evidence": [
+                {
+                    "source_id": "15464986.1075855378456.JavaMail.evans@thyme",
+                    "excerpt": "I would suggest holding the business plan meetings here then take a trip without any formal business meetings.",
+                    "start_offset": 170,
+                    "end_offset": 257,
+                    "timestamp": "2001-05-04 13:51:00-07:00"
+                },
+                {
+                    "source_id": "15464986.1075855378456.JavaMail.evans@thyme",
+                    "excerpt": "My suggestion for where to go is Austin.",
+                    "start_offset": 755,
+                    "end_offset": 790,
+                    "timestamp": "2001-05-04 13:51:00-07:00"
+                }
+            ],
+            "valid_from": "2001-05-04 13:51:00-07:00",
+            "valid_until": null,
+            "status": "active",
+            "version": "v1",
+            "source": "phillip_allen",
+            "target": "austin_trip_discussion",
+            "key": 0
+        },
+        {
+            "claim_id": "754e8b7b-58fd-4a5d-acee-547a1071b606",
+            "subject_id": "john_lavorato",
+            "relation": "WORKS_FOR",
+            "object_id": "enron",
+            "evidence": [
+                {
+                    "source_id": "15464986.1075855378456.JavaMail.evans@thyme",
+                    "excerpt": "john.lavorato@enron.com",
+                    "start_offset": 137,
+                    "end_offset": 161,
+                    "timestamp": "2001-05-04 13:51:00-07:00"
+                }
+            ],
+            "valid_from": "2001-05-04 13:51:00-07:00",
+            "valid_until": null,
+            "status": "active",
+            "version": "v1",
+            "source": "john_lavorato",
+            "target": "enron",
+            "key": 0
+        },
+        {
+            "claim_id": "4aa29753-ee7f-4f4a-a407-2a7f6fad107e",
             "subject_id": "ina.rangel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "information.management@enron.com",
@@ -14508,7 +14631,7 @@
             "key": 0
         },
         {
-            "claim_id": "a9b2efab-f069-416f-b927-2e97868f0444",
+            "claim_id": "66c237a9-a62d-40f1-94f0-cdc8df6cb453",
             "subject_id": "ina.rangel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.lavorato@enron.com",
@@ -14530,7 +14653,7 @@
             "key": 0
         },
         {
-            "claim_id": "a6dd13ab-9275-4244-bdab-9eea84bc472e",
+            "claim_id": "e3a15a17-bd31-4400-8bb7-ccde6055d799",
             "subject_id": "ina.rangel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "amanda.huble@enron.com",
@@ -14552,7 +14675,7 @@
             "key": 0
         },
         {
-            "claim_id": "b53fb060-782e-4488-a1f7-934bd966f538",
+            "claim_id": "884cb710-3e69-422c-8e8b-3e6a07e1f7bb",
             "subject_id": "ina.rangel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "arsystem@mailman.enron.com",
@@ -14574,7 +14697,7 @@
             "key": 0
         },
         {
-            "claim_id": "62f10ac7-cc7a-4e1c-b780-c41a6308912e",
+            "claim_id": "ac9310fe-8507-4661-a139-006906423833",
             "subject_id": "tim.heizenrader@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -14596,7 +14719,7 @@
             "key": 0
         },
         {
-            "claim_id": "22d7079b-8c2f-481c-9583-e6f079bf3f87",
+            "claim_id": "f71385b5-2aef-44a5-829a-e9d5c0464351",
             "subject_id": "jsmith@austintx.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.k.allen@enron.com",
@@ -14625,7 +14748,7 @@
             "key": 0
         },
         {
-            "claim_id": "3003a794-a1de-40f8-b5f3-89c6b1d25092",
+            "claim_id": "306e9827-7c76-4509-8873-065c381dc360",
             "subject_id": "frank.hayden@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "dean.sacerdote@enron.com",
@@ -14647,7 +14770,7 @@
             "key": 0
         },
         {
-            "claim_id": "50902742-af43-4192-b56b-d40db6256d77",
+            "claim_id": "63f81961-5595-47dc-898a-ad6e28be57d9",
             "subject_id": "frank.hayden@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -14669,7 +14792,7 @@
             "key": 0
         },
         {
-            "claim_id": "a234e599-ae51-47bf-b5ee-3967217cbe1e",
+            "claim_id": "a04e5e24-3d4d-4fd0-9664-c2f32bf76938",
             "subject_id": "gthorse@keyad.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.k.allen@enron.com",
@@ -14691,7 +14814,7 @@
             "key": 0
         },
         {
-            "claim_id": "e3c84c9c-7deb-4f53-aa9e-5c50ecab2587",
+            "claim_id": "660cdc3e-329a-4c80-98c7-3893bcb0da55",
             "subject_id": "christi.nicolay@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -14713,7 +14836,7 @@
             "key": 0
         },
         {
-            "claim_id": "95709bf6-850a-4297-bfc4-cfb5ee2cb94e",
+            "claim_id": "b0764661-59ed-479d-b1c0-35f4856c6321",
             "subject_id": "richard.shapiro@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "leslie.lawner@enron.com",
@@ -14735,7 +14858,7 @@
             "key": 0
         },
         {
-            "claim_id": "0f906b6c-6040-4de0-a00d-07145cf32340",
+            "claim_id": "76ab1e1c-bba8-40a3-a5b1-07756afb3d5e",
             "subject_id": "stephanie.miller@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeff.dasovich@enron.com",
@@ -14757,7 +14880,7 @@
             "key": 0
         },
         {
-            "claim_id": "782ef9ce-0aee-4817-b5a3-3e40386bc1c0",
+            "claim_id": "d0b60af3-e7db-4d1d-8a6b-1a51ac68f0d2",
             "subject_id": "rebecca.cantrell@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -14779,7 +14902,7 @@
             "key": 0
         },
         {
-            "claim_id": "c6bad013-d970-4b1d-b793-b2d3c7eeedb2",
+            "claim_id": "47e87cb6-944c-4e13-be72-1dd618a8b56a",
             "subject_id": "mark.whitt@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jay.reitmeyer@enron.com",
@@ -14801,7 +14924,7 @@
             "key": 0
         },
         {
-            "claim_id": "8425c8bd-1b6c-4725-b10d-f6adb2a0b5ca",
+            "claim_id": "c901ec55-c861-42ac-83f6-465f804fd3b0",
             "subject_id": "paul.kaufman@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -14823,7 +14946,7 @@
             "key": 0
         },
         {
-            "claim_id": "d545dfbb-0589-4132-8f1e-5171c107db06",
+            "claim_id": "314092d3-b952-4565-8a48-bfdecd6cc8d4",
             "subject_id": "1.11913372.-2@multexinvestornetwork.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -14845,7 +14968,7 @@
             "key": 0
         },
         {
-            "claim_id": "ec16f227-69c7-4115-9450-3b19ac09e865",
+            "claim_id": "b527c79b-b0c5-4ad6-a1f8-7f42b81c2456",
             "subject_id": "aod@newsdata.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "western.price.survey.contacts@ren-6.cais.net",
@@ -14867,7 +14990,7 @@
             "key": 0
         },
         {
-            "claim_id": "a71215dc-f5d0-45bc-9d19-3533fb728404",
+            "claim_id": "f1a1a709-c89f-4b2c-888f-8014e9cb0f58",
             "subject_id": "aod@newsdata.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "western.price.survey.contacts@proxy4.ba.best.com",
@@ -14889,7 +15012,7 @@
             "key": 0
         },
         {
-            "claim_id": "828f579f-3a77-42be-b0ff-3f70f48873a5",
+            "claim_id": "ba6811e8-62eb-4421-8d09-ee953e0c671f",
             "subject_id": "critical.notice@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ywang@enron.com",
@@ -14939,7 +15062,7 @@
             "key": 0
         },
         {
-            "claim_id": "95f92706-0e0e-4d03-ab32-8461adc8a274",
+            "claim_id": "1cb1cdb5-fc02-4cd2-abc9-62f5820085d7",
             "subject_id": "critical.notice@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "patti.sullivan@enron.com",
@@ -14989,7 +15112,7 @@
             "key": 0
         },
         {
-            "claim_id": "0cb2b2e4-a5ed-4e49-9a60-d61345f0520a",
+            "claim_id": "4735dce7-d898-4a6f-80c3-119e07d22bd2",
             "subject_id": "critical.notice@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.k.allen@enron.com",
@@ -15039,7 +15162,7 @@
             "key": 0
         },
         {
-            "claim_id": "e94beff6-1142-4906-866c-be1becc3b040",
+            "claim_id": "8f162343-1b50-4fa1-b468-cef98fe925df",
             "subject_id": "critical.notice@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jane.m.tholt@enron.com",
@@ -15089,7 +15212,7 @@
             "key": 0
         },
         {
-            "claim_id": "9a97fda8-86ab-44bf-8cf8-804fb0008e58",
+            "claim_id": "ef4861de-8710-4e8d-907e-d59d5c7a6c92",
             "subject_id": "critical.notice@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mike.grigsby@enron.com",
@@ -15139,7 +15262,7 @@
             "key": 0
         },
         {
-            "claim_id": "28bfebcb-43d2-46ef-b43d-18b5311c8598",
+            "claim_id": "5b5e254d-af7a-4efe-a5e8-a4cbdda446d4",
             "subject_id": "market-reply@listserv.dowjones.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "market_alert@listserv.dowjones.com",
@@ -15161,7 +15284,7 @@
             "key": 0
         },
         {
-            "claim_id": "df853fe7-b9b1-43f8-a6f1-addb723a8339",
+            "claim_id": "cdc0b1a0-0ad6-4145-8eac-b221616616a7",
             "subject_id": "webmaster@earnings.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -15190,7 +15313,7 @@
             "key": 0
         },
         {
-            "claim_id": "f6a78fc6-c876-4c03-a1be-df90980a0abf",
+            "claim_id": "ba840503-7ada-488e-aa46-1c99000313fb",
             "subject_id": "yild@zdemail.zdlists.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -15212,7 +15335,7 @@
             "key": 0
         },
         {
-            "claim_id": "8065f784-7542-487f-87cb-5e23ea0023da",
+            "claim_id": "e9bf6c72-fa1b-4dc0-99ae-ea87932ec3e6",
             "subject_id": "bounce-news-932653@lists.autoweb.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -15234,7 +15357,7 @@
             "key": 0
         },
         {
-            "claim_id": "639c9943-8879-438b-9cc2-fcc0355c8a02",
+            "claim_id": "77f2dfdc-0582-450d-acbf-9da48d1c5fd2",
             "subject_id": "public.relations@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "all.houston@enron.com",
@@ -15256,7 +15379,7 @@
             "key": 0
         },
         {
-            "claim_id": "5b03e952-c621-403d-92ab-1c9b750764c1",
+            "claim_id": "002f10ff-826e-464a-92a7-0b3e586928b8",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "steve.jacobellis@enron.com",
@@ -15278,7 +15401,7 @@
             "key": 0
         },
         {
-            "claim_id": "a08e860d-9b8d-46e2-9d5b-f76895cb38ce",
+            "claim_id": "db00897f-456b-46e3-93c1-1feaab0169a3",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mauricio.mora@enron.com",
@@ -15300,7 +15423,7 @@
             "key": 0
         },
         {
-            "claim_id": "f61c7f9a-4902-4914-9529-51c595c19009",
+            "claim_id": "dc33699d-4bff-40bc-9efe-3ee56e0dcaf1",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "chris.figueroa@enron.com",
@@ -15322,7 +15445,7 @@
             "key": 0
         },
         {
-            "claim_id": "439a242c-7e23-4f04-b53d-7c2594387626",
+            "claim_id": "1b15cd1b-f63a-4232-8315-d0f38454da62",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "sean.kiehne@enron.com",
@@ -15344,7 +15467,7 @@
             "key": 0
         },
         {
-            "claim_id": "4c88f0ba-dd21-4e0a-b429-3fdd2c9e5c05",
+            "claim_id": "752d54a8-8333-4270-a66e-d69b350afbab",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "maria.arefieva@enron.com",
@@ -15366,7 +15489,7 @@
             "key": 0
         },
         {
-            "claim_id": "d1822f73-82f8-4d5e-9c59-b92ed110d4fc",
+            "claim_id": "fc7ae49e-aadc-4872-ad7f-137cfba7bcd6",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.kiani@enron.com",
@@ -15388,7 +15511,7 @@
             "key": 0
         },
         {
-            "claim_id": "7a31158b-3d6a-49f6-9076-b0fffcfc25c7",
+            "claim_id": "e915d7d3-cbad-4d9b-a787-ac4dfcc58991",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brian.terp@enron.com",
@@ -15410,7 +15533,7 @@
             "key": 0
         },
         {
-            "claim_id": "650d0505-b4c7-4ba7-93be-1d550b6ce6ad",
+            "claim_id": "b3ced7a7-4e16-4cf3-aa4c-aa95f988c79e",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "robert.wheeler@enron.com",
@@ -15432,7 +15555,7 @@
             "key": 0
         },
         {
-            "claim_id": "a22eb423-f422-4348-99b3-271b20ff7137",
+            "claim_id": "e6c8aa23-0b8a-4045-8c76-d5bd1bcda4fb",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "matthew.frank@enron.com",
@@ -15454,7 +15577,7 @@
             "key": 0
         },
         {
-            "claim_id": "13fd7881-c082-415c-b1e5-565360ba82c1",
+            "claim_id": "ef0345ea-dc61-47ff-a077-f7a08c262c95",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jennifer.bagwell@enron.com",
@@ -15476,7 +15599,7 @@
             "key": 0
         },
         {
-            "claim_id": "a14174ac-a39c-49a8-81d4-0629a3989b14",
+            "claim_id": "54ae6418-c491-46e5-9d7d-27ec17f76e69",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scott.baukney@enron.com",
@@ -15498,7 +15621,7 @@
             "key": 0
         },
         {
-            "claim_id": "db859aba-b170-4503-bee5-fecfcdf53d9e",
+            "claim_id": "a45c2a9d-3712-4514-9937-13383ea8dbbf",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "victor.gonzalez@enron.com",
@@ -15520,7 +15643,7 @@
             "key": 0
         },
         {
-            "claim_id": "6171c10b-e9e2-4d3e-b07f-5aa68d19f854",
+            "claim_id": "ec38c953-aca8-4718-bb92-fbcd6eb05ba7",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.gordon@enron.com",
@@ -15542,7 +15665,7 @@
             "key": 0
         },
         {
-            "claim_id": "8ce39e7b-5f94-4f3c-82d2-a449754a6ad3",
+            "claim_id": "b2783013-56fc-4ac2-b653-c3034ab52592",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeff.gray@enron.com",
@@ -15564,7 +15687,7 @@
             "key": 0
         },
         {
-            "claim_id": "9bcfb1fd-6396-4f28-9a9e-54680210c26f",
+            "claim_id": "b5ac401e-268e-48e1-98ab-45098beec655",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "david.loosley@enron.com",
@@ -15586,7 +15709,7 @@
             "key": 0
         },
         {
-            "claim_id": "6040765a-21ed-4a88-ac4a-99d155395929",
+            "claim_id": "015beb08-160a-4b32-a6bf-5c0a8c75d988",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "aamir.maniar@enron.com",
@@ -15608,7 +15731,7 @@
             "key": 0
         },
         {
-            "claim_id": "07b1825f-14a4-442a-863b-9f43fcf0be11",
+            "claim_id": "8ef78607-470c-495e-b636-b7069f104021",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "massimo.marolo@enron.com",
@@ -15630,7 +15753,7 @@
             "key": 0
         },
         {
-            "claim_id": "065bbf00-519a-4e23-af1d-06b7a839d7aa",
+            "claim_id": "f560c5fa-2acf-47cd-b848-522b8cf70849",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "vladi.pimenov@enron.com",
@@ -15652,7 +15775,7 @@
             "key": 0
         },
         {
-            "claim_id": "f0349046-3582-4ddb-a9e1-0f09a41b9252",
+            "claim_id": "e00ef50d-d5b5-4394-b890-9e88110fb5f6",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "reagan.rorschach@enron.com",
@@ -15674,7 +15797,7 @@
             "key": 0
         },
         {
-            "claim_id": "82546196-c386-426e-9299-38c81340cc45",
+            "claim_id": "7aa98e2b-5c49-4a02-a181-a82fc0474ddb",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "zachary.sampson@enron.com",
@@ -15696,7 +15819,7 @@
             "key": 0
         },
         {
-            "claim_id": "c271a641-d7c2-46ed-afce-485abfa8ff60",
+            "claim_id": "c921548f-bfb7-449b-9de3-5580977dab33",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "matt.smith@enron.com",
@@ -15718,7 +15841,7 @@
             "key": 0
         },
         {
-            "claim_id": "8df8c41b-2a11-44ef-a63a-41bd6eefaa51",
+            "claim_id": "a87055c4-1935-4af2-8e91-fe60b33003e0",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "joseph.wagner@enron.com",
@@ -15740,7 +15863,7 @@
             "key": 0
         },
         {
-            "claim_id": "9c2801dd-69d6-4f9d-b77c-20f2c70fde5d",
+            "claim_id": "aba25795-dfbd-404f-8813-7456953d8c3d",
             "subject_id": "tracy.arthur@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "vincent.wagner@enron.com",
@@ -15762,7 +15885,7 @@
             "key": 0
         },
         {
-            "claim_id": "81766f56-1dc0-46e9-be3b-c6a172902991",
+            "claim_id": "0f753e4b-1d61-4d4b-af04-645cf45b070c",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "christi.nicolay@enron.com",
@@ -15791,7 +15914,7 @@
             "key": 0
         },
         {
-            "claim_id": "1901eb6d-548c-45a5-9753-9b11a6a47de0",
+            "claim_id": "ea9d1454-9543-4727-9ae6-22a6b69bc9a7",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "james.steffes@enron.com",
@@ -15820,7 +15943,7 @@
             "key": 0
         },
         {
-            "claim_id": "f48de68e-3d19-41da-ab3f-5f361f163d01",
+            "claim_id": "38145b84-a83e-469a-b080-6db884177dfb",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeff.dasovich@enron.com",
@@ -15849,7 +15972,7 @@
             "key": 0
         },
         {
-            "claim_id": "9ce81b7b-25f3-4c0e-8747-0ec85725195c",
+            "claim_id": "77803a64-1756-4ff4-98f7-da9c88a01ea2",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "joe.hartsoe@enron.com",
@@ -15878,7 +16001,7 @@
             "key": 0
         },
         {
-            "claim_id": "ef127e3e-9946-4caf-aa9c-7b696ae4ba5a",
+            "claim_id": "f777634c-e2f1-4a77-a12e-ed84913ef9fc",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mary.hain@enron.com",
@@ -15907,7 +16030,7 @@
             "key": 0
         },
         {
-            "claim_id": "eb1e6150-9a25-4f67-be24-0348e4685a01",
+            "claim_id": "af5a557e-3566-484a-bbe5-bbf434a0d83a",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -15936,7 +16059,7 @@
             "key": 0
         },
         {
-            "claim_id": "99b88ac4-ad8a-4916-ba53-d55ac6f78620",
+            "claim_id": "76a3c6f6-f985-4f5b-a521-98e9b14173c3",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pkaufma@enron.com",
@@ -15965,7 +16088,7 @@
             "key": 0
         },
         {
-            "claim_id": "a85b4542-9881-4363-96f0-5a417cdd8a7b",
+            "claim_id": "a6056f53-4260-4106-9883-4920ab983d7d",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "richard.sanders@enron.com",
@@ -15994,7 +16117,7 @@
             "key": 0
         },
         {
-            "claim_id": "7c41eff1-7087-4269-b5c7-bf72f561b3f5",
+            "claim_id": "3b9bb900-2c0a-4405-8180-c2a810ac8abc",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "richard.shapiro@enron.com",
@@ -16023,7 +16146,7 @@
             "key": 0
         },
         {
-            "claim_id": "9e157089-07da-4c1c-bb91-8b89f1691dc2",
+            "claim_id": "fe9770b0-e978-4afc-820f-082d4d0d9146",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stephanie.miller@enron.com",
@@ -16052,7 +16175,7 @@
             "key": 0
         },
         {
-            "claim_id": "1acfcd91-3f93-495d-aa6c-174be69cdd47",
+            "claim_id": "21ac09b5-6e40-4498-a59e-f4e96fe9a591",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "steven.kean@enron.com",
@@ -16081,7 +16204,7 @@
             "key": 0
         },
         {
-            "claim_id": "857e9a4a-3586-4b91-bb83-03d8b8319e24",
+            "claim_id": "dafeb8d8-191f-463a-84c1-da37700fbb01",
             "subject_id": "sarah.novosel@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "susan.mara@enron.com",
@@ -16110,7 +16233,7 @@
             "key": 0
         },
         {
-            "claim_id": "e7673d3c-859d-40a5-936a-6f20051b7826",
+            "claim_id": "dc02acc8-f651-4202-a295-cc79d54a02d6",
             "subject_id": "bobregon@bga.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "strawbale@crest.org",
@@ -16132,7 +16255,7 @@
             "key": 0
         },
         {
-            "claim_id": "f24c8458-508b-4212-be53-6a39b6d2698c",
+            "claim_id": "0ba85449-82b1-40a5-823b-bfe8d881ca7b",
             "subject_id": "subscriptions@intelligencepress.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -16154,7 +16277,7 @@
             "key": 0
         },
         {
-            "claim_id": "e36bedb2-11cf-4b84-9104-a79905c0d47a",
+            "claim_id": "0770e06f-7bf8-4ec1-b8d5-c7e676b5ee12",
             "subject_id": "rob_tom@freenet.carleton.ca",
             "relation": "SENT_EMAIL_TO",
             "object_id": "calxa@aol.com",
@@ -16176,7 +16299,7 @@
             "key": 0
         },
         {
-            "claim_id": "72a628e7-41c8-486c-800a-1d0c2603613d",
+            "claim_id": "6c99f31c-679a-489e-b6f4-8ffa46eb5180",
             "subject_id": "calxa@aol.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "strawbale@crest.org",
@@ -16198,7 +16321,7 @@
             "key": 0
         },
         {
-            "claim_id": "29cd1c91-2020-4291-bfbf-50e6f68a16c2",
+            "claim_id": "691e41b5-2919-4fce-9940-bf06da0206fd",
             "subject_id": "calxa@aol.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "absteen@dakotacom.net",
@@ -16220,7 +16343,7 @@
             "key": 0
         },
         {
-            "claim_id": "2a9850cc-6a71-419b-b26c-ce9cd5c89471",
+            "claim_id": "0aff966c-0708-4947-8581-690a05196cd4",
             "subject_id": "ei_editor@ftenergy.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "energyinsight@spector.ftenergy.com",
@@ -16242,7 +16365,7 @@
             "key": 0
         },
         {
-            "claim_id": "a2fce1aa-ba77-4005-b132-c168c20cccd4",
+            "claim_id": "f39572de-ad99-481b-bfbc-2ce9cf2a2041",
             "subject_id": "ei_editor@ftenergy.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "einsighthtml@spector.ftenergy.com",
@@ -16264,7 +16387,7 @@
             "key": 0
         },
         {
-            "claim_id": "72b0bffe-d483-44b5-8000-ea7f835d21f9",
+            "claim_id": "cd078a14-c7fd-48f0-a2e0-cb97b9faa648",
             "subject_id": "billc@greenbuilder.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "strawbale@crest.org",
@@ -16286,7 +16409,7 @@
             "key": 0
         },
         {
-            "claim_id": "b28a6d6d-1408-4396-bbf0-4f6b3e009e81",
+            "claim_id": "2376ed6c-e9a3-4ebc-9abe-66a607680670",
             "subject_id": "matt@fastpacket.net",
             "relation": "SENT_EMAIL_TO",
             "object_id": "strawbale@crest.org",
@@ -16308,7 +16431,7 @@
             "key": 0
         },
         {
-            "claim_id": "be6bc1a3-9ca3-467c-96b7-dd00d795db70",
+            "claim_id": "efb09ee9-7455-4c64-8646-2e918020e3b2",
             "subject_id": "jfreeman@ssm.net",
             "relation": "SENT_EMAIL_TO",
             "object_id": "strawbale@crest.org",
@@ -16330,7 +16453,7 @@
             "key": 0
         },
         {
-            "claim_id": "36300a80-f8d4-4863-8bde-03f81dbf07c4",
+            "claim_id": "f8d82ec3-ac6b-4d0b-9ccb-2c4702921303",
             "subject_id": "kim.ward@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -16352,7 +16475,7 @@
             "key": 0
         },
         {
-            "claim_id": "375c5774-7f8e-45dd-b99a-a47696d8207a",
+            "claim_id": "352fff84-97fd-40c1-8312-e6710670ecfb",
             "subject_id": "grensheltr@aol.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mccormick@elkus-manfredi.com",
@@ -16374,7 +16497,7 @@
             "key": 0
         },
         {
-            "claim_id": "8ee356c5-b029-4c0c-af31-aeeef39cac23",
+            "claim_id": "96bf9657-db2f-48ff-9b5e-058c0a08f53c",
             "subject_id": "grensheltr@aol.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kopp@kinneret.kinneret.co.il",
@@ -16396,7 +16519,7 @@
             "key": 0
         },
         {
-            "claim_id": "d3e7ac28-644a-46d1-ad50-5d0be8fd8ad0",
+            "claim_id": "16b555f7-9cf6-476a-86a3-156e358a9d55",
             "subject_id": "grensheltr@aol.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "strawbale@crest.org",
@@ -16418,7 +16541,7 @@
             "key": 0
         },
         {
-            "claim_id": "3d00a3c0-a8dd-4703-a29e-037b4a68c64a",
+            "claim_id": "c16be210-4dae-4455-87dc-4728f3e94723",
             "subject_id": "yahoo-delivers@yahoo-inc.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@ect.enron.com",
@@ -16440,7 +16563,7 @@
             "key": 0
         },
         {
-            "claim_id": "68eb72fa-067e-4cd6-af12-a29f6ddcb3ff",
+            "claim_id": "4e796839-c2b7-4499-8761-63f29af6cd68",
             "subject_id": "perfmgmt@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@enron.com",
@@ -16462,7 +16585,7 @@
             "key": 0
         },
         {
-            "claim_id": "0e96e3bd-d0c5-4f75-a308-d5490867441c",
+            "claim_id": "6d4d9e9b-7ffe-4a07-a121-884ab16a4ec2",
             "subject_id": "announce@inbox.nytimes.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pallen@ect.enron.com",
@@ -16491,7 +16614,7 @@
             "key": 0
         },
         {
-            "claim_id": "2d500f9b-78be-47a3-b3b8-bb6648a9240b",
+            "claim_id": "d1ca1cfb-e901-4b58-911f-28330117e7f8",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -16513,7 +16636,7 @@
             "key": 0
         },
         {
-            "claim_id": "136462f0-1ddc-45c3-a255-248bb224f464",
+            "claim_id": "bec6e405-418d-4e05-9f82-b7ff7aaf783b",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "robina.barker-bennett@enron.com",
@@ -16535,7 +16658,7 @@
             "key": 0
         },
         {
-            "claim_id": "727f36bf-0c72-4117-bfc1-cb13bba7e7ff",
+            "claim_id": "33744ab5-e5f3-455c-adf5-4c9ba9ad267f",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "richard.causey@enron.com",
@@ -16557,7 +16680,7 @@
             "key": 0
         },
         {
-            "claim_id": "fd836972-a88c-4642-bb3d-ccb79e5b9d96",
+            "claim_id": "8afcceca-bf7f-4011-a56d-d84f65f7daa3",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "joseph.deffner@enron.com",
@@ -16579,7 +16702,7 @@
             "key": 0
         },
         {
-            "claim_id": "fcb92bdd-69d2-4da8-9b34-1e9e9e12d463",
+            "claim_id": "3842d89b-d658-404b-9345-48054a228a0e",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "andrew.fastow@enron.com",
@@ -16601,7 +16724,7 @@
             "key": 0
         },
         {
-            "claim_id": "f67d9818-61e1-4f47-8937-ff292bcd0505",
+            "claim_id": "5785919b-cd9f-49ec-8a1e-eb3bbbc3f6f5",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kevin.garland@enron.com",
@@ -16623,7 +16746,7 @@
             "key": 0
         },
         {
-            "claim_id": "24635894-2880-4b81-9963-43bb29f74e2b",
+            "claim_id": "7eee7b2b-f6cf-49b8-98d6-beb2e2a3740b",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ken.rice@enron.com",
@@ -16645,7 +16768,7 @@
             "key": 0
         },
         {
-            "claim_id": "a91f6e35-c115-4030-a751-5881bb8a36a7",
+            "claim_id": "2b601b2d-a897-4ff0-b34a-7a4bd109f12d",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "eric.shaw@enron.com",
@@ -16667,7 +16790,7 @@
             "key": 0
         },
         {
-            "claim_id": "0ced2022-3e8a-4e81-80c6-998dda11abd7",
+            "claim_id": "3c67e663-8ebb-47df-af61-d3cb8c6cca29",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "hunter.shively@enron.com",
@@ -16689,7 +16812,7 @@
             "key": 0
         },
         {
-            "claim_id": "47af0f46-b670-4bc1-8921-16f6e72ed468",
+            "claim_id": "f64342d9-04eb-48e6-88ec-3d4aa15df92e",
             "subject_id": "alyse.herasimchuk@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stuart.staley@enron.com",
@@ -16711,7 +16834,7 @@
             "key": 0
         },
         {
-            "claim_id": "ac7bba41-e034-49b5-8913-040f63f3fd40",
+            "claim_id": "3c91ca14-0e77-45ec-9fa5-5cadd73a6d08",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "lisa.jacobson@enron.com",
@@ -16733,7 +16856,7 @@
             "key": 0
         },
         {
-            "claim_id": "13194da2-a8a7-4a91-9d8b-82a64d6423d1",
+            "claim_id": "0e1a4288-a9c5-4f9e-ac2b-6a16bbfc4179",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kevin.mcgowan@enron.com",
@@ -16755,7 +16878,7 @@
             "key": 0
         },
         {
-            "claim_id": "934d97b6-862e-431e-bae5-26f2780a8154",
+            "claim_id": "4b781d78-679b-4aad-b878-48c1128094b5",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "daniel.reck@enron.com",
@@ -16777,7 +16900,7 @@
             "key": 0
         },
         {
-            "claim_id": "73ef38a9-7ad0-4292-9937-a790f7e5ee44",
+            "claim_id": "b873ff64-59dc-4f5f-a39b-9d4aba723b91",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "matt.goering@enron.com",
@@ -16799,7 +16922,7 @@
             "key": 0
         },
         {
-            "claim_id": "83c73de0-06ed-4b65-88a2-aedccb3cc665",
+            "claim_id": "c87cb44b-e8de-4025-8d9d-d83f9fe07540",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stuart.staley@enron.com",
@@ -16821,7 +16944,7 @@
             "key": 0
         },
         {
-            "claim_id": "fa6fbbc9-c24f-427b-8646-f0d466122598",
+            "claim_id": "686e8093-9de8-4137-8a96-f6af6fa4de1a",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.massey@enron.com",
@@ -16843,7 +16966,7 @@
             "key": 0
         },
         {
-            "claim_id": "ba1ee29b-73b6-48ac-97d3-a5fc043f5632",
+            "claim_id": "8261ff88-b921-44fc-934a-610abdbc07c9",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeff.andrews@enron.com",
@@ -16865,7 +16988,7 @@
             "key": 0
         },
         {
-            "claim_id": "5c9ae4f2-eeb8-4d76-bd89-767d309484c1",
+            "claim_id": "44d6b73e-575c-4ed7-a074-33248dbac116",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "adam.siegel@enron.com",
@@ -16887,7 +17010,7 @@
             "key": 0
         },
         {
-            "claim_id": "8266b4b8-6730-41c4-bec8-06e4b836aa8b",
+            "claim_id": "d683bfc7-02c0-46c1-b04a-d81529f18861",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kristin.quinn@enron.com",
@@ -16909,7 +17032,7 @@
             "key": 0
         },
         {
-            "claim_id": "47186529-2132-4fb4-8f29-f6aafd004151",
+            "claim_id": "39c10eea-f86f-4f9d-8cc5-e5c2d701b931",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "heather.mitchell@enron.com",
@@ -16931,7 +17054,7 @@
             "key": 0
         },
         {
-            "claim_id": "7acb215f-a9fa-43d9-963b-c46d865d1e77",
+            "claim_id": "eab4ba15-4521-4a18-8901-28ab5149460a",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "elizabeth.howley@enron.com",
@@ -16953,7 +17076,7 @@
             "key": 0
         },
         {
-            "claim_id": "6591e502-8331-4bc0-928f-9d75be2e14bb",
+            "claim_id": "a113a5fa-9b76-47df-9ea7-8ef572b32733",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scott.watson@enron.com",
@@ -16975,7 +17098,7 @@
             "key": 0
         },
         {
-            "claim_id": "f253be7e-8eb6-49c3-9cac-84c0a1c03942",
+            "claim_id": "96134bd9-1cc6-46fb-9ce6-388be4717c1d",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.dobler@enron.com",
@@ -16997,7 +17120,7 @@
             "key": 0
         },
         {
-            "claim_id": "9942920a-a8c0-4efb-8189-b866d5137696",
+            "claim_id": "74123272-cb34-437a-8c6b-3bcf38cc23b5",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kevin.presto@enron.com",
@@ -17019,7 +17142,7 @@
             "key": 0
         },
         {
-            "claim_id": "d96acdf3-a2a6-47a4-955a-4b10a1277e83",
+            "claim_id": "cdbe97fb-a276-4849-9daa-c8a3ad77f9f2",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "lloyd.will@enron.com",
@@ -17041,7 +17164,7 @@
             "key": 0
         },
         {
-            "claim_id": "40d2cfca-3c1c-4dd3-9301-77d47f7ab9a9",
+            "claim_id": "ba0569a8-226a-41af-a79c-100dbe43a272",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "doug.gilbert-smith@enron.com",
@@ -17063,7 +17186,7 @@
             "key": 0
         },
         {
-            "claim_id": "dbfee3e8-b11b-4a1f-ae93-c3ec81ed348a",
+            "claim_id": "28f76e04-f254-4e75-ae19-ed9e12c5d5f4",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "fletcher.sturm@enron.com",
@@ -17085,7 +17208,7 @@
             "key": 0
         },
         {
-            "claim_id": "77b26cb8-c9ca-410c-9e98-11fd0e16edaf",
+            "claim_id": "bc7807e9-9eeb-4a36-b868-40918b2df215",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "rogers.herndon@enron.com",
@@ -17107,7 +17230,7 @@
             "key": 0
         },
         {
-            "claim_id": "c81c4017-47be-4764-a7bf-2191980b8ca5",
+            "claim_id": "8a4ad970-215f-486c-b167-0eb80d3c4eb1",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "robert.benson@enron.com",
@@ -17129,7 +17252,7 @@
             "key": 0
         },
         {
-            "claim_id": "e1d31130-1484-4bd4-be9f-328f923c23e5",
+            "claim_id": "fe312000-3d75-47d6-be04-a760fab8e344",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.davis@enron.com",
@@ -17151,7 +17274,7 @@
             "key": 0
         },
         {
-            "claim_id": "18f53303-d33b-4a71-91de-286db0646504",
+            "claim_id": "7246ace0-7153-4afc-9889-93ddc23dc979",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ben.jacoby@enron.com",
@@ -17180,7 +17303,7 @@
             "key": 0
         },
         {
-            "claim_id": "23ad3624-2161-45d5-a361-37ab51f611fb",
+            "claim_id": "1ba36c2e-80a7-4291-a3a1-3a0c04bc3d36",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "dave.kellermeyer@enron.com",
@@ -17202,7 +17325,7 @@
             "key": 0
         },
         {
-            "claim_id": "9eff6970-3bcd-4442-aa91-7336ae57cacb",
+            "claim_id": "9b02e5a7-aba7-437e-843e-df841b07533d",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mitch.robinson@enron.com",
@@ -17224,7 +17347,7 @@
             "key": 0
         },
         {
-            "claim_id": "4acbd95d-ff78-4181-ac88-59503a499a90",
+            "claim_id": "52200e8f-7612-4838-bac0-cef3e616cd5d",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.moore@enron.com",
@@ -17246,7 +17369,7 @@
             "key": 0
         },
         {
-            "claim_id": "f92b868e-6ae0-4731-ac19-13ca0b3539c2",
+            "claim_id": "8eea7df0-21a7-4919-be04-51df8876de6d",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "naveed.ahmed@enron.com",
@@ -17268,7 +17391,7 @@
             "key": 0
         },
         {
-            "claim_id": "02cf6241-851b-428f-b986-7611e617e618",
+            "claim_id": "8215ef73-850f-4806-9068-d2c3fb233f9d",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -17290,7 +17413,7 @@
             "key": 0
         },
         {
-            "claim_id": "c743ca40-081b-424b-8b37-d888940b45e6",
+            "claim_id": "7153dbc9-3363-4c24-a5b5-174e058cc09a",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scott.neal@enron.com",
@@ -17312,7 +17435,7 @@
             "key": 0
         },
         {
-            "claim_id": "57fa0691-33df-4982-9142-b40119c5fd73",
+            "claim_id": "c18839f8-4f45-4e78-9df1-67543c03cca4",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "elliot.mainzer@enron.com",
@@ -17334,7 +17457,7 @@
             "key": 0
         },
         {
-            "claim_id": "211358d0-59c4-43bb-b810-9f6d671caadf",
+            "claim_id": "5cbba4e9-e5e2-4053-b272-c859e3f79bf1",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "richard.lewis@enron.com",
@@ -17363,7 +17486,7 @@
             "key": 0
         },
         {
-            "claim_id": "83cccb7a-e8c5-4e96-99a7-f98b87df4ca2",
+            "claim_id": "6c08eb71-a7dc-4c14-88d0-22f3e7c2cb75",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jackie.gentle@enron.com",
@@ -17385,7 +17508,7 @@
             "key": 0
         },
         {
-            "claim_id": "4ff1fdd2-e00c-4606-9440-007c477e9918",
+            "claim_id": "48157413-1832-48e3-a79e-d236cd9ca4f5",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "fiona.grant@enron.com",
@@ -17407,7 +17530,7 @@
             "key": 0
         },
         {
-            "claim_id": "d273d31d-5f6d-4be1-9494-9eb1d543f30e",
+            "claim_id": "decb11bd-9eac-47ca-ad04-e55883cd87c9",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kate.bauer@enron.com",
@@ -17429,7 +17552,7 @@
             "key": 0
         },
         {
-            "claim_id": "b6a7352a-24b6-4d63-b8de-d5723abc75cd",
+            "claim_id": "81368622-8b56-48b5-bff0-17aeeb07b622",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.schroeder@enron.com",
@@ -17451,7 +17574,7 @@
             "key": 0
         },
         {
-            "claim_id": "1414f971-63ee-48f0-9f66-d8c1c8b7e241",
+            "claim_id": "bf84c40c-ff55-4bad-b348-8b5cbb94fb12",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.shafer@enron.com",
@@ -17473,7 +17596,7 @@
             "key": 0
         },
         {
-            "claim_id": "dce89c1f-798e-400a-ac68-5ece02490f1c",
+            "claim_id": "e1aaace3-2f1c-4ecf-a225-7d054c4b3a31",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "shelley.corman@enron.com",
@@ -17495,7 +17618,7 @@
             "key": 0
         },
         {
-            "claim_id": "4dfdc8bc-8783-4ebd-a18c-874fa25ecfd8",
+            "claim_id": "f1c6d733-7770-4f78-852b-bcd41ffde593",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "hap.boyd@enron.com",
@@ -17517,7 +17640,7 @@
             "key": 0
         },
         {
-            "claim_id": "89da295e-1b43-4c59-980f-dff067f4f6c9",
+            "claim_id": "c12c1bfd-e90f-4f8f-8a57-6ce77f66929a",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "brian.stanley@enron.com",
@@ -17539,7 +17662,7 @@
             "key": 0
         },
         {
-            "claim_id": "fe505b0e-9550-4046-bd6e-4b9b57a646a1",
+            "claim_id": "772d558c-b8e6-4806-80cf-9764bffa36d6",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "robert.moss@enron.com",
@@ -17561,7 +17684,7 @@
             "key": 0
         },
         {
-            "claim_id": "af062f69-f41b-45fa-b485-b53a882a3e5c",
+            "claim_id": "b41819c6-e7ef-4791-a05a-d83803515b49",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jeffrey.keeler@enron.com",
@@ -17583,7 +17706,7 @@
             "key": 0
         },
         {
-            "claim_id": "a93d48db-f134-483b-9ef8-89f1a8fc8869",
+            "claim_id": "8a779602-a11f-4b8b-b80a-08739461dacc",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mary.schoen@enron.com",
@@ -17605,7 +17728,7 @@
             "key": 0
         },
         {
-            "claim_id": "6b6439f1-fe1b-4b38-8534-9eca77f7c2aa",
+            "claim_id": "112ee31a-8262-4dfb-80dc-cb05123c844a",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "laura.glenn@enron.com",
@@ -17627,7 +17750,7 @@
             "key": 0
         },
         {
-            "claim_id": "b644217b-9d81-410b-9b64-a19e1a9d42e0",
+            "claim_id": "66cdd977-d7ae-4916-ab01-8414349fb3ed",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "kathy.mongeon@enron.com",
@@ -17649,7 +17772,7 @@
             "key": 0
         },
         {
-            "claim_id": "e815764e-289e-4fbf-b6ad-f6df3baa0d4c",
+            "claim_id": "b4260402-e7d6-48e5-851a-e5b5995cbc32",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "stacey.bolton@enron.com",
@@ -17671,7 +17794,7 @@
             "key": 0
         },
         {
-            "claim_id": "c7842a44-3705-4b7e-9258-fc1b1283a1d4",
+            "claim_id": "9f4a61ec-b770-4313-b481-6671cbc93569",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "rika.imai@enron.com",
@@ -17693,7 +17816,7 @@
             "key": 0
         },
         {
-            "claim_id": "c0f566f1-ebe5-4c84-bbf3-f7194d47b885",
+            "claim_id": "e0e37700-f244-4020-96dc-5dad5138c481",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "rob.bradley@enron.com",
@@ -17715,7 +17838,7 @@
             "key": 0
         },
         {
-            "claim_id": "cee45c1e-f50e-49be-ad0d-1cfbe6fb9149",
+            "claim_id": "0cc75aa1-35c0-432a-a09b-6599744b7ed9",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ann.schmidt@enron.com",
@@ -17737,7 +17860,7 @@
             "key": 0
         },
         {
-            "claim_id": "070238d3-d3c8-4398-ba4a-793ff0aae055",
+            "claim_id": "6c8668b7-1c61-4b4a-9c09-aa6a79019e62",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "jake.thomas@enron.com",
@@ -17759,7 +17882,7 @@
             "key": 0
         },
         {
-            "claim_id": "cc8d9875-27db-4456-a109-08bf3964ec98",
+            "claim_id": "82c8c879-ec46-4a5c-b816-5d3516965c23",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "david.parquet@enron.com",
@@ -17781,7 +17904,7 @@
             "key": 0
         },
         {
-            "claim_id": "be81c3bd-0c37-47b3-b449-09b9439f75c4",
+            "claim_id": "3cde65df-4320-43d1-baa4-dc205c4e3962",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "lisa.yoho@enron.com",
@@ -17803,7 +17926,7 @@
             "key": 0
         },
         {
-            "claim_id": "155d6a5b-e312-4801-a48f-1c102d431e73",
+            "claim_id": "6dcbec5a-d0e6-4b5c-9e43-9e83de736cc9",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "christi.nicolay@enron.com",
@@ -17825,7 +17948,7 @@
             "key": 0
         },
         {
-            "claim_id": "438ed601-1218-4386-9800-2b526dc4203a",
+            "claim_id": "41e020d4-20ed-43ec-b82c-e25d2e654a95",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "harry.kingerski@enron.com",
@@ -17847,7 +17970,7 @@
             "key": 0
         },
         {
-            "claim_id": "c9f7171b-b213-425b-b372-9af7d9683383",
+            "claim_id": "eea89d18-3809-4720-abd3-16804d3bfdd9",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "james.steffes@enron.com",
@@ -17869,7 +17992,7 @@
             "key": 0
         },
         {
-            "claim_id": "4c18fd00-656f-4a61-95fc-108990a88ad7",
+            "claim_id": "6d898d5d-308f-4323-9ba7-43f26cb0cdfb",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "ginger.dernehl@enron.com",
@@ -17891,7 +18014,7 @@
             "key": 0
         },
         {
-            "claim_id": "529d6ccf-97e3-48d5-ad6a-7662b895648f",
+            "claim_id": "71a4a732-9401-4641-99f0-00d2494233b0",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "richard.shapiro@enron.com",
@@ -17913,7 +18036,7 @@
             "key": 0
         },
         {
-            "claim_id": "9271f136-3f26-4db3-b29f-c303c5a73aa3",
+            "claim_id": "1ef0e90a-5df5-42b0-8721-3b0bb1979871",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "scott.affelt@enron.com",
@@ -17935,7 +18058,7 @@
             "key": 0
         },
         {
-            "claim_id": "f1a531f7-06dc-4b78-95fb-fa9526e04ba4",
+            "claim_id": "6df3f95a-c201-4101-af50-e64b2d3f0edc",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "susan.worthen@enron.com",
@@ -17957,7 +18080,7 @@
             "key": 0
         },
         {
-            "claim_id": "44a06b77-c279-43aa-8555-7d3ede35df55",
+            "claim_id": "63542646-3170-4671-ae72-810719039a49",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "gavin.dillingham@enron.com",
@@ -17979,7 +18102,7 @@
             "key": 0
         },
         {
-            "claim_id": "fcbdbbbf-613a-454a-a839-c74a3232e920",
+            "claim_id": "f2238400-75f0-416a-ad1b-6ec102864784",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "lora.sullivan@enron.com",
@@ -18001,7 +18124,7 @@
             "key": 0
         },
         {
-            "claim_id": "4b053979-cce9-4f4b-b200-497ed4cde666",
+            "claim_id": "9f20a3cb-4c2d-408a-95a1-51a484143ca0",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.hardy@enron.com",
@@ -18023,7 +18146,7 @@
             "key": 0
         },
         {
-            "claim_id": "69ca0e4e-2c46-4946-bf9e-8b655edb3a56",
+            "claim_id": "aa9d86ba-9d1a-4749-addf-f21a1ae18957",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "linda.robertson@enron.com",
@@ -18045,7 +18168,7 @@
             "key": 0
         },
         {
-            "claim_id": "d1e25db3-cd3d-407a-ab5d-25908b6ef404",
+            "claim_id": "4d57ff60-d020-4b35-85a1-cc56cb2e8b0e",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "carolyn.cooney@enron.com",
@@ -18067,7 +18190,7 @@
             "key": 0
         },
         {
-            "claim_id": "7a272953-5451-4968-90d3-9cc788d3e330",
+            "claim_id": "b8be072f-e35f-4e64-9782-850afe02362c",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "pat29@erols.com",
@@ -18089,7 +18212,7 @@
             "key": 0
         },
         {
-            "claim_id": "c6884a9e-672e-4cb1-9a1b-509ce2b99c4b",
+            "claim_id": "fcc1c937-c6c5-4751-bc30-7cb13a428b6f",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "marc.phillips@enron.com",
@@ -18111,7 +18234,7 @@
             "key": 0
         },
         {
-            "claim_id": "1d77fb31-05cd-48f9-92ad-79ad824c8444",
+            "claim_id": "98f8805a-5c49-4b3f-a0f4-3354d3f72404",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "gus.eghneim@enron.com",
@@ -18133,7 +18256,7 @@
             "key": 0
         },
         {
-            "claim_id": "b29245cb-99c5-491d-8173-1df3509339f3",
+            "claim_id": "5aeb35b3-3348-4acf-b6b4-6093047f7933",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "mark.palmer@enron.com",
@@ -18155,7 +18278,7 @@
             "key": 0
         },
         {
-            "claim_id": "cdf58d18-e939-4437-bf69-e5df35a4ed34",
+            "claim_id": "9fc9e61a-34a2-401d-8e40-bda6c308fb86",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "philip.davies@enron.com",
@@ -18177,7 +18300,7 @@
             "key": 0
         },
         {
-            "claim_id": "34c65ab3-fd44-4f5f-9de1-2138b2f33021",
+            "claim_id": "c35fb3a1-7e5b-4f9d-b880-4d548ff57c40",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "nailia.dindarova@enron.com",
@@ -18199,7 +18322,7 @@
             "key": 0
         },
         {
-            "claim_id": "6b782b80-dda0-43da-988c-341f87271ee5",
+            "claim_id": "46b75701-8507-4791-8b21-c95eb7860be0",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "john.chappell@enron.com",
@@ -18221,7 +18344,7 @@
             "key": 0
         },
         {
-            "claim_id": "db7bb8b5-8bf5-4ca2-af8b-4cfda2c289d2",
+            "claim_id": "eeda394e-64ee-4965-800c-5bb8b84ae26b",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "tracy.ralston@enron.com",
@@ -18243,7 +18366,7 @@
             "key": 0
         },
         {
-            "claim_id": "8ac6ec41-71e2-4ad5-ac98-776dcd93f03a",
+            "claim_id": "adbba63d-c107-4659-ae47-8e87e12eccc1",
             "subject_id": "lisa.jacobson@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "maureen.mcvicker@enron.com",
@@ -18265,7 +18388,7 @@
             "key": 0
         },
         {
-            "claim_id": "300a2c81-bc3f-4202-a27c-6ddc5155ce94",
+            "claim_id": "4ddd9de0-e3aa-4ef0-a57d-27fadf258303",
             "subject_id": "tiffany.miller@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",
@@ -18287,7 +18410,7 @@
             "key": 0
         },
         {
-            "claim_id": "d585d240-7916-44f9-86eb-a4f32efabf03",
+            "claim_id": "0919039b-b0ba-4761-b751-1b0e0f2febd3",
             "subject_id": "tiffany.miller@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "barry.tycholiz@enron.com",
@@ -18309,7 +18432,7 @@
             "key": 0
         },
         {
-            "claim_id": "8e224ed0-61e7-4206-b0e9-ca58cb396b32",
+            "claim_id": "3dcf4c21-8ccc-4692-b76d-b73b31faff34",
             "subject_id": "philip.polsky@enron.com",
             "relation": "SENT_EMAIL_TO",
             "object_id": "phillip.allen@enron.com",

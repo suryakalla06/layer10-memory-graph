@@ -1,0 +1,40 @@
+LAYER10 RETRIEVED CONTEXT PACKS
+===============================
+
+Question 1: Who did Phillip Allen send emails to recently?
+Retrieved Context:
+- Entity Linked: tim.belden@enron.com
+  Grounding: Source 18782981.1075855378110.JavaMail.evans@thyme | Excerpt: 'Subject: Re'
+- Entity Linked: john.lavorato@enron.com
+  Grounding: Source 15464986.1075855378456.JavaMail.evans@thyme | Excerpt: 'Subject: Re:'
+- Entity Linked: leah.arsdall@enron.com
+  Grounding: Source 24216240.1075855687451.JavaMail.evans@thyme | Excerpt: 'Subject: Re: test'
+- Entity Linked: randall.gay@enron.com
+  Grounding: Source 13505866.1075863688222.JavaMail.evans@thyme | Excerpt: 'No Subject'
+- Entity Linked: greg.piper@enron.com
+  Grounding: Source 30922949.1075863688243.JavaMail.evans@thyme | Excerpt: 'Subject: Re: Hello'
+
+Question 2: What semantic relationships were extracted by the LLM?
+Retrieved Context:
+- Semantic Claim: phillip.allen@enron.com -> MANAGES -> western_desk
+  Grounding 1: Source 15464986.1075855378456.JavaMail.evans@thyme [0:50] | Excerpt: 'Traveling to have a business meeting takes the fun'
+  Grounding 2: Source 24216240.1075855687451.JavaMail.evans@thyme [0:30] | Excerpt: 'test successful.  way to go!!!'
+  Grounding 3: Source 13505866.1075863688222.JavaMail.evans@thyme [0:49] | Excerpt: 'Randy,
+
+ Can you send me a schedule of the salary'
+  Grounding 4: Source 30922949.1075863688243.JavaMail.evans@thyme [0:33] | Excerpt: 'Let's shoot for Tuesday at 11:45.'
+  Grounding 5: Source 30965995.1075863688265.JavaMail.evans@thyme [0:50] | Excerpt: 'Greg,
+
+ How about either next Tuesday or Thursday?'
+  Grounding 6: Source 16254169.1075863688286.JavaMail.evans@thyme [0:50] | Excerpt: 'Please cc the following distribution list with upd'
+  Grounding 7: Source 17189699.1075863688308.JavaMail.evans@thyme [0:32] | Excerpt: 'any morning between 10 and 11:30'
+  Grounding 8: Source 20641191.1075855687472.JavaMail.evans@thyme [0:50] | Excerpt: '1. login:  pallen pw: ke9davis
+
+ I don't think the'
+  Grounding 9: Source 30795301.1075855687494.JavaMail.evans@thyme [0:50] | Excerpt: '---------------------- Forwarded by Phillip K Alle'
+- Semantic Claim: Phillip Allen -> WORKS_FOR -> Enron
+  Grounding 1: Source 18782981.1075855378110.JavaMail.evans@thyme [0:23] | Excerpt: 'phillip.allen@enron.com'
+- Semantic Claim: Phillip Allen -> DISCUSSED_TOPIC -> forecast
+  Grounding 1: Source 18782981.1075855378110.JavaMail.evans@thyme [0:20] | Excerpt: 'Here is our forecast'
+- Semantic Claim: Tim Belden -> WORKS_FOR -> Enron
+  Grounding 1: Source 18782981.1075855378110.JavaMail.evans@thyme [0:20] | Excerpt: 'tim.belden@enron.com'

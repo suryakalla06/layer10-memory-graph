@@ -1,0 +1,27 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+lib/
+bin/
+include/
+share/
+pyvenv.cfg
+.env
+venv/
+env/
+
+# Streamlit/UI Junk
+temp_graph.html
+.streamlit/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Large Data
+data/emails.csv
+# If you don't want to upload the 1000-email CSV to Git, uncomment the line below:
+# data/*.csv

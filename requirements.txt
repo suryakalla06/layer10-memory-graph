@@ -1,0 +1,14 @@
+# Core Data Handling
+pandas
+pydantic
+networkx
+
+# AI & LLM Integration
+google-genai
+
+# Visualization Layer
+streamlit
+pyvis
+
+# Utility
+python-dateutil

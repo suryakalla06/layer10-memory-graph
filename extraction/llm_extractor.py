@@ -119,36 +119,27 @@ def extract_knowledge_from_email(email: EmailArtifact) -> dict:
                     print(f"  ⚠️ Rate limit hit. Retrying in {2 ** attempt} seconds...")
                     time.sleep(2 ** attempt)
                     continue
-                else:
-                    print(f"  ❌ API Quota Exhausted! Injecting graceful mock data...")
-                    
-                    # Dynamic Mock Data to prevent UI crashes
-                    safe_excerpt = email.body[:50].strip() if email.body else "No body text."
-                    
-                    return {
-                        "entities": [
-                            Entity(entity_id="western_desk", entity_type="Organization", name="Western Trading Desk", aliases=[])
-                        ],
-                        "claims": [
-                            Claim(
-                                claim_id=str(uuid.uuid4()),
-                                subject_id=email.sender if email.sender else "unknown_sender",
-                                relation="MANAGES",
-                                object_id="western_desk",
-                                evidence=[
-                                    Evidence(
-                                        source_id=email.message_id,
-                                        excerpt=safe_excerpt, 
-                                        start_offset=0,
-                                        end_offset=len(safe_excerpt),
-                                        timestamp=email.date or datetime.now()
-                                    )
-                                ],
-                                valid_from=email.date or datetime.now()
-                            )
-                        ]
-                    }
-            
+
+                # Quota exhausted. Return NOTHING.
+                #
+                # This branch used to inject a hardcoded "Western Trading Desk"
+                # entity and a synthetic MANAGES claim so the explorer always had
+                # something to render. Those claims entered the graph
+                # indistinguishable from extracted ones — in a pipeline whose
+                # entire purpose is that no ungrounded fact is ever stored. A
+                # demo that shows an empty graph is honest; a demo that shows
+                # invented facts is not, and it quietly falsifies every
+                # downstream count, context pack and citation.
+                #
+                # The header-extraction path is unaffected and still populates
+                # the graph from all 1,000 emails, so an exhausted quota now
+                # degrades the semantic layer rather than corrupting it.
+                print(
+                    f"  ❌ API quota exhausted for {email.message_id}. "
+                    f"Returning no claims — the graph stays smaller rather than wrong."
+                )
+                return {"entities": [], "claims": []}
+
             print(f"Extraction failed for email {email.message_id}: {e}")
             break
 

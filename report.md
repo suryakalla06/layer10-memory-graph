@@ -205,6 +205,18 @@ calls, and the API call retries **3 attempts** with exponential backoff on HTTP
 429. Header extraction still runs across all 1,000 emails, so the graph has real
 scale (343 nodes) even though only 10 emails were semantically parsed.
 
+**When the quota is exhausted, extraction returns nothing.** That is worth
+stating explicitly, because it used to do the opposite. An earlier version
+injected a hardcoded `Western Trading Desk` entity and a synthetic `MANAGES`
+claim so the explorer always had something to render — and those entered the
+graph indistinguishable from extracted ones, in a pipeline whose entire purpose
+is that no ungrounded fact is ever stored. It also quietly falsified every
+downstream count, context pack and citation built on top.
+
+An empty graph is an honest failure; a populated one built from invented facts is
+not. Because the header path is unaffected, an exhausted quota now degrades the
+semantic layer rather than corrupting the graph.
+
 ### 4.8 Retrieval that cites
 
 `RetrievalEngine.search` matches a query against entity names, aliases and node
@@ -246,19 +258,16 @@ are correct.
 
 ## 6. Limitations
 
-Listed worst-first, because the first one contradicts the project's own thesis.
+Listed worst-first.
 
-1. **The quota fallback injects fabricated claims.** When the API quota is
-   exhausted after all retries, `llm_extractor.py` returns a hardcoded
-   `Western Trading Desk` entity and a synthetic `MANAGES` claim to keep the UI
-   from crashing. Those claims enter the graph indistinguishable from real ones.
-   In a system built entirely around never storing an ungrounded fact, this is
-   the sharpest flaw in the codebase. **The fix is to return an empty result and
-   let the UI render an empty graph** — a demo that shows nothing is honest; a
-   demo that shows invented facts is not.
-2. **No tests.** There are zero test files. The dedup logic in §4.3 and the
+1. **No tests.** There are zero test files. The dedup logic in §4.3 and the
    grounding injection in §4.1 are the two things most worth pinning down, and
    both are currently protected only by reading the code.
+2. **Offsets are never re-validated.** The prompt demands exact character offsets
+   and verbatim excerpts, but nothing checks `body[start:end] == excerpt` before
+   storing. This is now the one remaining path by which the model can assert
+   something about provenance and be believed — and closing it is a handful of
+   lines.
 3. **Only 10 emails are semantically extracted.** The 343 nodes are
    overwhelmingly header-derived. The semantic layer — the part the architecture
    is actually about — is demonstrated, not exercised.
@@ -266,8 +275,7 @@ Listed worst-first, because the first one contradicts the project's own thesis.
    newest-first sort will miss a paraphrase and will bury an older, better
    answer.
 5. **Extraction quality is unmeasured.** No ground truth, so no precision or
-   recall. Offsets are demanded by the prompt but never re-validated against the
-   source text in Python — a cheap, high-value check that is not yet there.
+   recall figure exists for the pipeline.
 6. **State is a JSON file.** Nothing is persistent, concurrent, or incremental;
    re-running rebuilds from scratch.
 
@@ -275,13 +283,11 @@ Listed worst-first, because the first one contradicts the project's own thesis.
 
 In the order I would actually do it:
 
-1. Delete the mock-data fallback (§6.1).
-2. **Verify offsets in Python** — assert `body[start:end] == excerpt` and reject
-   the claim otherwise. This closes the one remaining path by which the model can
-   assert a provenance fact, and it is a handful of lines.
-3. Tests for the three dedup tiers and the grounding injection.
-4. Hand-label ~50 emails to get a real precision/recall number.
-5. Swap keyword retrieval for embeddings, keeping the citation format.
+1. **Verify offsets in Python** — assert `body[start:end] == excerpt` and reject
+   the claim otherwise (§6.2).
+2. Tests for the three dedup tiers and the grounding injection.
+3. Hand-label ~50 emails to get a real precision/recall number.
+4. Swap keyword retrieval for embeddings, keeping the citation format.
 
 ---
 

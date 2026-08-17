@@ -89,11 +89,15 @@ if __name__ == "__main__":
     engine = RetrievalEngine(mgr)
     
     print("\n" + "="*60)
-    print("TEST 1: Querying LLM Semantic Data")
+    print("TEST 1: Querying across the corpus domain")
     print("="*60)
-    # Testing for the mock data we injected earlier to prove it works!
-    print(engine.search("western_desk"))  
-    
+    # Was `search("western_desk")`, which only ever returned a hit because the
+    # extractor injected a hardcoded entity of that name when the API quota ran
+    # out. That fallback is gone, so this now queries something the header path
+    # genuinely produces. Which *semantic* entities exist depends entirely on
+    # what extraction returned, so no specific one can be demoed reliably.
+    print(engine.search("enron"))
+
     print("="*60)
     print("TEST 2: Querying Header Data")
     print("="*60)
